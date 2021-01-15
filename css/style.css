@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+:root {
+  --backgroundColor: #0f0f12;            /* background colour  */
+  --wallpaper: url("../img/Chemical\ Convection\ -\ teundenouden.jpg"); 
+/* tried some other from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
+  --fontFamilyBookmark: 'Roboto Mono', monospace;
+  --containerBg: #272727;                /* colour container bookmarks */
+  --secondaryFg: #b3b3b3;                /* colour text bookmarks */
+  --fg: #ffffff;                         /* colour for hover in bookmarks and datetime fonts */
+  --scrollbarColor: #3f3f3f;             /* colour scrollbar in bookmarks */
+  --fontColorWidgetIP: #573c3c;          /* the color for the widget with your IP */
+  --colorAM-PM: #b94b3c;                 /* color background AM/PM display */
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23585858' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.no-js {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* Bookmarks*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#bookmark-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin: 0em;
+}
+
+.bookmark-set {
+  padding: 1em;
+  background-color: var(--containerBg);
+  border-radius: 3px;
+  font-family: var(--fontFamilyBookmark);
+  font-size: 0.85rem;
+  width: 25%;
+  height: 20em;
+  /* 12 por defecto; aca se cambia el largo de los bookmarks*/
+  margin: 0em 0.5em;
+  box-sizing: border-box;
+}
+
+.bookmark-set:first-child {
+  margin: 0em 0.5em 0rem 0em;
+}
+
+.bookmark-set:last-child {
+  margin: 0em 0em 0rem 0.5em;
+}
+
+.bookmark-inner-container {
+  overflow-y: scroll;
+  height: 85%;
+  vertical-align: top;
+  padding-right: 6px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbarColor) #ffffff00;
+}
+
+.bookmark-inner-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bookmark-inner-container::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+.bookmark-inner-container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarColor);
+  border-radius: 6px;
+  border: 3px solid #ffffff00;
+}
+
+.bookmark-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0em 0em 0.35em 0em;
+}
+
+.bookmark {
+  text-decoration: none;
+  color: var(--secondaryFg);
+  display: block;
+  margin: 0.5em 0em;
+}
+
+.bookmark:hover {
+  color: var(--fg);
+}
+
+
+/*  Wallpaper */
+.image {
+  position: relative;
+  width: 100%;
+  /* 50%*/
+  height: 30vh;
+  margin: 5% 0 0 0;
+  /* border-radius: 3px; */
+  background: var(--wallpaper);
+  background-size: 100%;
+  background-position: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  border: 1px solid #b94b3c;
+  box-shadow: inset 0 0 100em #000000;
+}
+
+.image:hover {
+  box-shadow: 0 0 30px #e3c292;
+  border: 1px solid #b9c3b3;
+}
+
+/* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
+.image:hover .time {
+  visibility: hidden;
+  color: #b9c3b3;
+  text-shadow: 1px 1px 15px #000000;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.image:hover .mention-wallpaper {
+  opacity: 100%;
+}
+
+.image:hover #myBtn {
+  background-color: #3caab9;
+}
+
+.image:hover #skull {
+  color: black;
+}
+
+.image:hover .date {
+  -webkit-text-stroke: 0.7px black;
+  color: #b9c3b3;
+  text-shadow: 2px 2px 5px #000000;
+  font-weight: 750;
+}
+
+.image:hover .weather-container {
+  visibility: visible;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  cursor: default;
+}
+
+.datetime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--fg);
+  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.date {
+  text-shadow: 5px 5px 5px #000000;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time span:not(:last-child) {
+  text-shadow: 2px 3px #442621;
+  margin: 0 6px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.time span:last-child {
+  background: var(--colorAM-PM);
+  font-size: 30%;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.weather-container {
+  visibility: hidden;
+  position: absolute;
+}
+
+.mention-wallpaper {
+  background-color: #442621;
+  bottom: 0px;
+  right: 3px;
+  font-size: 12px;
+  position: absolute;
+  opacity: 50%;
+}
+
+.links-wallpaper {
+  text-decoration: none;
+  color: #b9c3b3;
+  font-weight: 700;
+}
+
+
+/* SEARCHBAR */
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0.5em 0em 0em 0em;
+}
+
+.searchbox {
+  color: #D8DEE9;
+  background-color: rgba(39, 39, 39, .5);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.3em 0.5em 0.3em;
+}
+
+.searchbar input:focus {
+  color: #E5E9F0;
+  background-color: rgba(68, 38, 33, .7);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.search-engines {
+  border-radius: 0.25rem;
+  color: var(--secondaryFg);
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-engines li:first-child {
+  margin: 0 1em 0 1em;
+}
+
+.search-engines li:last-child {
+  margin: 0;
+}
+
+.search-engines li {
+  margin: 0 1em 0 0;
+}
+
+.search-engines li.active {
+  color: #b94b3c;
+  font-weight: 700;
+}
+
+.search-engines li p {
+  cursor: default;
+  transition: all .2s;
+  font-size: 12px;
+}
+
+/* background animation when noscript is active */
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background: linear-gradient(to bottom, rgba(102, 32, 41, 0.2), transparent);
+  border-radius: 38% 42%;
+  animation: spin 36s infinite linear;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  animation: spin 20s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  animation: spin 40s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* "footer" */
+.widget-ip {
+  color: var(--fontColorWidgetIP);
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-message {
+  color: cornsilk;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* the thing with the multiples iframes */
+#myDIV-show {
+  display: none;
+}
+
+#mydiv {
+  position: absolute;
+  resize: both;
+  z-index: 9;
+  left: 0.5%;
+  top: 10%;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#mydivheader {
+  padding: 1px;
+  cursor: move;
+  z-index: 10;
+  background-color: #093253;
+  color: #fff;
+}
+
+#cerrardiv {
+  padding: 1px;
+  left: 83px;
+  position: relative;
+  background-color: #531a09;
+  color: #fff;
+}
+
+/* button for the credits */
+#myBtn {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background-color: #333;
+  padding: 0%;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+#skull {
+  color: #b94b3c;
+  padding: 7%;
+  height: 18px;
+  width: 19px;
+}
+
+
+/* MODAL https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid rgb(0, 0, 0);
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+.close {
+  color: var(--fg);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #b94b3c;
+  color: var(--fg);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  text-align: justify;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 16px;
+  background-color: #333;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.repo-github {
+  text-decoration: none;
+  color: var(--secondaryFg);
+}
+
+.repo-github:hover {
+  color: var(--fg);
+}
+
+.links-modal {
+  text-decoration: none;
+}
+
+
+
+/* Tooltip https://codepen.io/cristina-silva/pen/XXOpga */
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-toggle {
+  position: relative;
+}
+
+.tooltip-toggle::before {
+  position: absolute;
+  top: -80px;
+  left: -55px;
+  background-color: var(--fontColorWidgetIP);
+  border-radius: 5px;
+  color: #fff;
+  content: attr(aria-label);
+  padding: 1rem;
+  text-transform: none;
+  transition: all 0.5s ease;
+  width: 160px;
+}
+
+.tooltip-toggle::after {
+  position: absolute;
+  top: -12px;
+  left: 40px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2b222a;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+  margin-left: -5px;
+  width: 0;
+}
+
+.tooltip-toggle::before,
+.tooltip-toggle::after {
+  color: #efefef;
+  font-family: monospace;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+.tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after,
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+/* My attempt to make it responsive */
+@media screen and (max-width: 767px) {
+  .no-js {
+    font-size: 150%;
+  }
+
+  .image {
+    width: 100%;
+    /* 50% */
+    margin: 3% 0 0 0;
+    background-size: 150%;
+    background-repeat: repeat;
+  }
+
+  /* https://stackoverflow.com/questions/14431411/pure-css-to-make-font-size-responsive-based-on-dynamic-amount-of-characters */
+  .time {
+    font-size: 15vw;
+    /* 7vw */
+  }
+
+  .time span:last-child {
+    font-size: 5vw;
+    /* 3vw */
+  }
+
+  .date {
+    font-size: 5vw;
+    /* 3vw */
+  }
+
+  .mention {
+    font-size: 10px;
+  }
+
+  #bookmark-container {
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em 0em;
+  }
+
+  .bookmark-set {
+    border-radius: 3px;
+    font-size: 0.8rem;
+    width: 95vw;
+    height: 10.5em;
+    /* 12 por defecto; aca se cambia el largo de los bookmarks*/
+    margin: 0.5em 0.5em;
+    box-sizing: border-box;
+  }
+
+  .bookmark-set:first-child {
+    margin: 0em 0em 0.5rem 0.5em;
+  }
+
+  .bookmark-set:last-child {
+    margin: 0.5em 0em 0rem 0.5em;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  .searchbar {
+    width: 70%;
+  }
+}
+
+/* https://stackoverflow.com/questions/42415141/what-is-the-media-query-for-large-desktops/42415313 */
+@media screen and (min-width: 768px) {
+
+  /* "desktop" */
+  .time {
+    font-size: 600%;
+  }
+
+  .date {
+    font-size: 200%;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+
+  /* 2k and bigger */
+  .time {
+    font-size: 1000%;
+  }
+}
