@@ -1,7 +1,7 @@
 # StartpagePlox
 I wanted a startpage so I made one
 
-# [LIVE](https://alplox.github.io/StartpagePlox/)
+[Live](https://alplox.github.io/StartpagePlox/)
 
 ## Preview
 [![](https://raw.githubusercontent.com/Alplox/StartpagePlox/master/StartpagePlox.png)](https://alplox.github.io/StartpagePlox/)
