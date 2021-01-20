@@ -95,6 +95,7 @@ const bookmarks = [
       //Tools
       { name: "Temp-mail", url: "https://temp-mail.org" },
       { name: "Virustotal", url: "https://www.virustotal.com/" },
+      { name: "Recursos", url: "https://github.com/Alplox/mi-bitacora-webdev/blob/main/lista-recursos.md" },
       { name: "G Translate", url: "https://translate.google.com/" },
       { name: "D Translate", url: "https://www.deepl.com/en/translator" },
       { name: "Photopea", url: "https://www.photopea.com/" },
