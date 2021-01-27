@@ -78,6 +78,7 @@ const bookmarks = [
       { name: "📻Naturemixer", url: "https://naturemixer.com" },
       { name: "📻Moodil", url: "https://www.moodil.com/" },
       { name: "📻Rainymood", url: "https://www.rainymood.com/" },
+      { name: "📻Soundscape", url: "https://soundscape.world/" },
     ],
   },
   {
@@ -122,7 +123,6 @@ const bookmarks = [
       { name: "SP/weboas.is", url: "https://weboas.is/" },
       { name: "Goodsites.tech", url: "https://www.goodsites.tech/" },
       { name: "Learnxinyminutes", url: "https://learnxinyminutes.com/" },
-      { name: "Wiby.me", url: "https://wiby.me/" },
       { name: "Deviantart", url: "https://www.deviantart.com" },
       { name: "Artstation", url: "https://www.artstation.com" },
     ],
@@ -130,30 +130,39 @@ const bookmarks = [
   {
     title: "XD",
     links: [
-      //reddit alternatives
+//reddit alternatives
       { name: "Ruqqus (R)", url: "https://ruqqus.com/" },
-      { name: "Teddit (R)", url: "https://teddit.net/" },
+      { name: "Communities (R)", url: "https://communities.win/" },
       { name: "Saidit (R)", url: "https://saidit.net/" },
       { name: "Lemmy (R)", url: "https://lemmy.ml/" },
+      { name: "Poal.co (R)", url: "https://poal.co/" },
       { name: "Tildes (R)", url: "https://tildes.net" },
-      //youtube alternatives
-      { name: "Invidio (YT)", url: "https://invidio.us/" },
+      { name: "Libredd.it (R)", url: "https://libredd.it" }, //(front-end mirror for reddit)
+      { name: "Teddit (R)", url: "https://teddit.net/" }, //(front-end mirror for reddit)
+//youtube alternatives
       { name: "D.tube (YT)", url: "https://d.tube/" },
       { name: "Odysee (YT)", url: "https://odysee.com/" },
       { name: "Storyfire (YT)", url: "https://storyfire.com/" },
       { name: "Bitchute (YT)", url: "https://www.bitchute.com/" },
-      //twitter alternatives
-      { name: "Nitter (T)", url: "https://nitter.net" },
-      { name: "Joinmastodon (T)", url: "https://joinmastodon.org/" },
-      //instagram alternatives
+      { name: "Invidio (YT)", url: "https://invidio.us/" }, //(front-end mirror for youtube)
+//twitch.TV alternatives
+      { name: "Bitwave (TV)", url: "https://www.bitchute.com/" },
+      { name: "Dlive (TV)", url: "https://dlive.tv/" },
+      { name: "Trovo (TV)", url: "https://trovo.live/" },
+//twitter alternatives
+      { name: "Mastodon (T)", url: "https://joinmastodon.org/" },
+      { name: "Minds (T)", url: "https://www.minds.com/" },
+      { name: "Nitter (T)", url: "https://nitter.net" }, //(front-end mirror for twitter)
+//instagram alternatives
       { name: "Pixelfed (I)", url: "https://pixelfed.org/" },
-      { name: "Bibliogram (I)", url: "https://bibliogram.art" },
       { name: "Tiblar (I)", url: "https://tiblar.com" },
-      //facebook alternatives
+      { name: "Bibliogram (I)", url: "https://bibliogram.art" }, //(front-end mirror for Instagram)
+//facebook alternatives
       { name: "Gab (F)", url: "https://gab.com" },
+      { name: "Brax (F)", url: "https://brax.me/" },
       { name: "Diasporafoundation (F)", url: "https://diasporafoundation.org/" },
       { name: "Friendi (F)", url: "https://friendi.ca/" },
-      //sites extracted from this crap https://ghostbin.co/paste/hwzn6
+      //(most of the) sites extracted from this crap https://ghostbin.co/paste/hwzn6
     ],
   },
 
