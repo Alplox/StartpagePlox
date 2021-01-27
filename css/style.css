@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('/css/RobotoMono-VariableFont_wght.ttf');
+  src: url('../css/RobotoMono-VariableFont_wght.ttf');
 }
 
 :root {
