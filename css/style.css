@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/css/RobotoMono-VariableFont_wght.ttf');
+}
 
 :root {
   --backgroundColor: #0f0f12;            /* background colour  */
-  --wallpaper: url("../img/Chemical\ Convection\ -\ teundenouden.jpg"); 
+  --wallpaper: url("../img/Chemical-Convection-teundenouden.jpeg"); 
 /* tried some other from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
-  --fontFamilyBookmark: 'Roboto Mono', monospace;
+  --fontFamilyBookmark: 'Roboto Mono', Helvetica;
   --containerBg: #272727;                /* colour container bookmarks */
   --secondaryFg: #b3b3b3;                /* colour text bookmarks */
   --fg: #ffffff;                         /* colour for hover in bookmarks and datetime fonts */
