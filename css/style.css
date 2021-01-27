@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('../css/RobotoMono-VariableFont_wght.ttf');
+  src: url('../Font/RobotoMono-VariableFont_wght.ttf');
 }
 
 :root {
@@ -364,38 +364,6 @@ input:focus {
   font-size: 12px;
   text-align: center;
   font-family: "Segoe UI", sans-serif;
-}
-
-
-/* the thing with the multiples iframes */
-#myDIV-show {
-  display: none;
-}
-
-#mydiv {
-  position: absolute;
-  resize: both;
-  z-index: 9;
-  left: 0.5%;
-  top: 10%;
-  text-align: center;
-  font-family: "Segoe UI", sans-serif;
-}
-
-#mydivheader {
-  padding: 1px;
-  cursor: move;
-  z-index: 10;
-  background-color: #093253;
-  color: #fff;
-}
-
-#cerrardiv {
-  padding: 1px;
-  left: 83px;
-  position: relative;
-  background-color: #531a09;
-  color: #fff;
 }
 
 /* button for the credits */
