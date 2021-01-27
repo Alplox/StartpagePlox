@@ -17,11 +17,14 @@ I took inspiration from a lot of sources and end it mixing component from a few 
 - Code for "widget-ip" taken from https://www.ipify.org
 - Code and style for "weather-container" taken from https://weatherwidget.io
 - Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
+- Favicon created using this site https://favicon.io/
+
 ### Copyrighted Work:
 - SVG Background from https://www.heropatterns.com/
 - Chemical Convection By teundenouden https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684
 - Icons from https://ionicons.com/
 - Tooltip from codepen.io https://codepen.io/cristina-silva/pen/XXOpga
+- License for Roboto Mono font from https://fonts.google.com/
 
 ## License
 ```
