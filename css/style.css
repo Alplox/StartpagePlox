@@ -5,7 +5,7 @@
 
 :root {
   --backgroundColor: #0f0f12;            /* background colour  */
-  --wallpaper: url("../img/Chemical-Convection-teundenouden.jpeg"); 
+  --wallpaper: url("../img/Chemical-Convection\ by\ teundenouden.jpeg"); 
 /* tried some other from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
   --fontFamilyBookmark: 'Roboto Mono', Helvetica;
   --containerBg: #272727;                /* colour container bookmarks */
