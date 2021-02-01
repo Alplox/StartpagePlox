@@ -30,6 +30,7 @@ const bookmarks = [
       { name: "/r/DataHoarder", url: "https://old.reddit.com/r/DataHoarder/" },      
       { name: "/r/privacy", url: "https://old.reddit.com/r/privacy/" },
       { name: "/r/battlestations", url: "https://old.reddit.com/r/battlestations" },
+      { name: "/r/webdev", url: "https://old.reddit.com/r/webdev/" },
       { name: "/r/unixporn", url: "https://old.reddit.com/r/unixporn" },
       { name: "/r/startpages", url: "https://old.reddit.com/r/startpages/" },
       { name: "/r/worldnews", url: "https://old.reddit.com/r/worldnews/" },
@@ -73,6 +74,7 @@ const bookmarks = [
       { name: "📻Cmd.to", url: "https://cmd.to/fm" },
       { name: "📻R-a-d.io", url: "https://r-a-d.io/" },
       { name: "📻Listen.moe", url: "https://listen.moe/" },
+      { name: "📻Di.fm", url: "https://www.di.fm/" },
       //Background noise generators
       { name: "📻Asoftmurmur", url: "https://asoftmurmur.com/" },
       { name: "📻Naturemixer", url: "https://naturemixer.com" },
@@ -107,13 +109,14 @@ const bookmarks = [
       { name: "Waifu2x.booru", url: "https://waifu2x.booru.pics/" },
       { name: "Speedtest.net", url: "https://www.speedtest.net/" },
       { name: "Speed.cloudflare", url: "https://speed.cloudflare.com/" },
-      { name: "Unblockit", url: "https://unblockit.ltd/" },
       { name: "Dnsleaktest", url: "https://www.dnsleaktest.com/" },
       { name: "Ciberpatrulla", url: "https://ciberpatrulla.com/links/" },
       { name: "Osintframework", url: "https://osintframework.com/" },
       { name: "Onlineocr", url: "https://www.onlineocr.net/" },
       { name: "Timer-tab", url: "https://www.timer-tab.com/" },
+      { name: "Unblockit", url: "https://unblockit.ltd/" },
       { name: "Toffeeshare", url: "https://toffeeshare.com/" },
+      { name: "GNU CAT", url: "https://gnu.cat/" },
       //Inspo
       { name: "Product Hunt", url: "https://www.producthunt.com/" },
       { name: "Behance", url: "https://www.behance.net/" },
@@ -165,5 +168,4 @@ const bookmarks = [
       //(most of the) sites extracted from this crap https://ghostbin.co/paste/hwzn6
     ],
   },
-
 ];
