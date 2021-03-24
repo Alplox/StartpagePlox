@@ -1,6 +1,6 @@
 const bookmarks = [
   {
-    title: "Daily",
+    title: "Bruh",
     links: [
       { name: "Tele", url: "https://alplox.github.io/tele/" },
       { name: "Covid-19", url: "https://datastudio.google.com/reporting/b1689869-0c59-442c-951d-2991c0fc611d/page/rUZIB" },
@@ -15,6 +15,10 @@ const bookmarks = [
       { name: "Steamgifts", url: "https://www.steamgifts.com/" },
       { name: "Github", url: "https://github.com" },
       { name: "Gitlab", url: "https://gitlab.com" },
+      { name: "WhatsApp", url: "https://web.whatsapp.com/" },
+      { name: "Twitter", url: "https://www.twitter.com/" },
+      { name: "Instagram", url: "https://www.instagram.com/" },
+      { name: "Telegram", url: "https://web.telegram.org/" },
     ],
   },
   {
@@ -34,6 +38,7 @@ const bookmarks = [
       { name: "/r/unixporn", url: "https://old.reddit.com/r/unixporn" },
       { name: "/r/startpages", url: "https://old.reddit.com/r/startpages/" },
       { name: "/r/worldnews", url: "https://old.reddit.com/r/worldnews/" },
+      { name: "/r/composting", url: "https://old.reddit.com/r/composting/" },
     ],
   },
   {
@@ -45,6 +50,7 @@ const bookmarks = [
       { name: "/gd/", url: "https://boards.4channel.org/gd/" },
       { name: "/fa/", url: "https://boards.4channel.org/fa/" },
       { name: "/fit/", url: "https://boards.4channel.org/fit/" },
+      { name: "/biz/", url: "https://boards.4channel.org/biz/" },
       { name: "/r9k/", url: "https://boards.4chan.org/r9k/" },
       { name: "/v/", url: "https://boards.4channel.org/v/" },
       { name: "/wsg/", url: "https://boards.4channel.org/wsg/" },
@@ -81,15 +87,6 @@ const bookmarks = [
       { name: "📻Moodil", url: "https://www.moodil.com/" },
       { name: "📻Rainymood", url: "https://www.rainymood.com/" },
       { name: "📻Soundscape", url: "https://soundscape.world/" },
-    ],
-  },
-  {
-    title: "bruh",
-    links: [
-      { name: "WhatsApp", url: "https://web.whatsapp.com/" },
-      { name: "Twitter", url: "https://www.twitter.com/" },
-      { name: "Instagram", url: "https://www.instagram.com/" },
-      { name: "Telegram", url: "https://web.telegram.org/" },
     ],
   },
   {

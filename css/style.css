@@ -150,12 +150,7 @@ body {
 }
 
 /* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
-.image:hover .time {
-  visibility: hidden;
-  color: #b9c3b3;
-  text-shadow: 1px 1px 15px #000000;
-  -webkit-text-stroke: 1.5px black;
-}
+
 
 .image:hover .mention-wallpaper {
   opacity: 100%;
@@ -170,12 +165,14 @@ body {
 }
 
 .image:hover .date {
+  text-shadow: 5px 5px 5px #000000;
   -webkit-text-stroke: 0.7px black;
   color: #b9c3b3;
-  text-shadow: 2px 2px 5px #000000;
-  font-weight: 750;
+  
+  font-weight: 400;
 }
 
+/* 
 .image:hover .weather-container {
   visibility: visible;
   position: absolute;
@@ -187,6 +184,7 @@ body {
   pointer-events: none;
   cursor: default;
 }
+*/
 
 .datetime {
   display: flex;
@@ -229,10 +227,12 @@ body {
   border-radius: 5px;
 }
 
+/*
 .weather-container {
   visibility: hidden;
   position: absolute;
 }
+*/
 
 .mention-wallpaper {
   background-color: #442621;
