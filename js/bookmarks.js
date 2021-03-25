@@ -27,18 +27,28 @@ const bookmarks = [
       { name: "/r/FreeGameFindings", url: "https://old.reddit.com/r/FreeGameFindings/" },
       { name: "/r/chile", url: "https://old.reddit.com/r/chile/" },
       { name: "/r/movies", url: "https://old.reddit.com/r/movies/" },
-      { name: "/r/Art", url: "https://old.reddit.com/r/Art/" },
       { name: "/r/hacking", url: "https://old.reddit.com/r/hacking/" },
       { name: "/r/Piracy", url: "https://old.reddit.com/r/Piracy/" },
       { name: "/r/privacy", url: "https://old.reddit.com/r/privacy/" },
-      { name: "/r/DataHoarder", url: "https://old.reddit.com/r/DataHoarder/" },      
-      { name: "/r/privacy", url: "https://old.reddit.com/r/privacy/" },
-      { name: "/r/battlestations", url: "https://old.reddit.com/r/battlestations" },
+      { name: "/r/DataHoarder", url: "https://old.reddit.com/r/DataHoarder/" },
+      { name: "/r/homelab", url: "https://old.reddit.com/r/homelab/" },   
+      // WEB DEV
       { name: "/r/webdev", url: "https://old.reddit.com/r/webdev/" },
+      { name: "/r/web_design", url: "https://old.reddit.com/r/web_design/" },
+      { name: "/r/Frontend", url: "https://old.reddit.com/r/Frontend/" },
+      { name: "/r/javascript", url: "https://old.reddit.com/r/javascript/" },
+      // INSPO
+      { name: "/r/Art", url: "https://old.reddit.com/r/Art/" },
+      { name: "/r/battlestations", url: "https://old.reddit.com/r/battlestations" },
       { name: "/r/unixporn", url: "https://old.reddit.com/r/unixporn" },
       { name: "/r/startpages", url: "https://old.reddit.com/r/startpages/" },
+      // ?
       { name: "/r/worldnews", url: "https://old.reddit.com/r/worldnews/" },
+      { name: "/r/science", url: "https://old.reddit.com/r/science/" },
+      { name: "/r/IIB", url: "https://old.reddit.com/r/InternetIsBeautiful/" },
+      { name: "/r/WSB", url: "https://old.reddit.com/r/wallstreetbets/" },
       { name: "/r/composting", url: "https://old.reddit.com/r/composting/" },
+      
     ],
   },
   {
