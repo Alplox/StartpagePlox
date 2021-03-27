@@ -31,7 +31,8 @@ const bookmarks = [
       { name: "/r/Piracy", url: "https://old.reddit.com/r/Piracy/" },
       { name: "/r/privacy", url: "https://old.reddit.com/r/privacy/" },
       { name: "/r/DataHoarder", url: "https://old.reddit.com/r/DataHoarder/" },
-      { name: "/r/homelab", url: "https://old.reddit.com/r/homelab/" },   
+      { name: "/r/homelab", url: "https://old.reddit.com/r/homelab/" }, 
+      { name: "/r/sysadmin", url: "https://old.reddit.com/r/sysadmin/" },  
       // WEB DEV
       { name: "/r/webdev", url: "https://old.reddit.com/r/webdev/" },
       { name: "/r/web_design", url: "https://old.reddit.com/r/web_design/" },
@@ -47,6 +48,7 @@ const bookmarks = [
       { name: "/r/science", url: "https://old.reddit.com/r/science/" },
       { name: "/r/IIB", url: "https://old.reddit.com/r/InternetIsBeautiful/" },
       { name: "/r/WSB", url: "https://old.reddit.com/r/wallstreetbets/" },
+      { name: "/r/Bitcoin", url: "https://old.reddit.com/r/Bitcoin/" },
       { name: "/r/composting", url: "https://old.reddit.com/r/composting/" },
       
     ],
