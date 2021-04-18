@@ -81,7 +81,7 @@ document.onkeypress = (e) => {
   search.onkeyup = (e) => {
     let args = e.target.value.split(" "),
       prefix = args[0],
-      engine = engines["g"][0], // the default engine (google in this case)
+      engine = engines["q"][0], // the default engine (Qwant in this case)
       str = 0;
 
     $s.qA(".search-engines li p").forEach((eng) => {
