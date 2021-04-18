@@ -12,7 +12,7 @@
   --secondaryFg: #b3b3b3;                /* colour text bookmarks */
   --fg: #ffffff;                         /* colour for hover in bookmarks and datetime fonts */
   --scrollbarColor: #3f3f3f;             /* colour scrollbar in bookmarks */
-  --fontColorWidgetIP: #573c3c;          /* the color for the widget with your IP */
+  /*--fontColorWidgetIP: #573c3c;           the color for the widget with your IP */
   --colorAM-PM: #b94b3c;                 /* color background AM/PM display */
 }
 
@@ -167,7 +167,7 @@ body {
 .image:hover .date {
   text-shadow: 5px 5px 5px #000000;
   -webkit-text-stroke: 0.7px black;
-  color: #b9c3b3;
+  color: #ffffff;
   
   font-weight: 400;
 }
