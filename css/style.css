@@ -467,6 +467,10 @@ input:focus {
   font-family: "Segoe UI", sans-serif;
 }
 
+.tachado {
+  text-decoration: line-through;
+}
+
 .modal-footer {
   display: flex;
   justify-content: center;
