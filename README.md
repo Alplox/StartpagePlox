@@ -14,8 +14,8 @@ I took inspiration from a lot of sources and end it mixing components from a few
 - Code and style for "bookmark-container" based on https://github.com/Jaredk3nt/homepage
 - Code and style for "datetime" based on https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
 - Code and style for "wave" based on https://github.com/0-l/aqua
-- Code for "widget-ip" taken from https://www.ipify.org
-- Code and style for "weather-container" taken from https://weatherwidget.io
+- ̶C̶o̶d̶e̶ ̶f̶o̶r̶ ̶"̶w̶i̶d̶g̶e̶t̶-̶i̶p̶"̶ ̶t̶a̶k̶e̶n̶ ̶f̶r̶o̶m̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶w̶w̶w̶.̶i̶p̶i̶f̶y̶.̶o̶r̶g̶
+- ̶C̶o̶d̶e̶ ̶a̶n̶d̶ ̶s̶t̶y̶l̶e̶ ̶f̶o̶r̶ ̶"̶w̶e̶a̶t̶h̶e̶r̶-̶c̶o̶n̶t̶a̶i̶n̶e̶r̶"̶ ̶t̶a̶k̶e̶n̶ ̶f̶r̶o̶m̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶w̶e̶a̶t̶h̶e̶r̶w̶i̶d̶g̶e̶t̶.̶i̶o̶
 - Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
 - Favicon created using this site https://favicon.io/
 
@@ -23,7 +23,7 @@ I took inspiration from a lot of sources and end it mixing components from a few
 - SVG Background from https://www.heropatterns.com/
 - Chemical Convection By teundenouden https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684
 - Icons from https://ionicons.com/
-- Tooltip from codepen.io https://codepen.io/cristina-silva/pen/XXOpga
+- ̶T̶o̶o̶l̶t̶i̶p̶ ̶f̶r̶o̶m̶ ̶c̶o̶d̶e̶p̶e̶n̶.̶i̶o̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶c̶o̶d̶e̶p̶e̶n̶.̶i̶o̶/̶c̶r̶i̶s̶t̶i̶n̶a̶-̶s̶i̶l̶v̶a̶/̶p̶e̶n̶/̶X̶X̶O̶p̶g̶a̶
 - Roboto Mono font from https://fonts.google.com/
 
 ## License
