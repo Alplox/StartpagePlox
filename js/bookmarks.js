@@ -122,12 +122,14 @@ const bookmarks = [
       { name: "📻R-a-d.io", url: "https://r-a-d.io/" },
       { name: "📻Listen.moe", url: "https://listen.moe/" },
       { name: "📻Di.fm", url: "https://www.di.fm/" },
+      { name: "📻Deko.fm/", url: "https://deko.fm/" },
       //Background noise generators
       { name: "📻Asoftmurmur", url: "https://asoftmurmur.com/" },
       { name: "📻Naturemixer", url: "https://naturemixer.com" },
       { name: "📻Moodil", url: "https://www.moodil.com/" },
       { name: "📻Rainymood", url: "https://www.rainymood.com/" },
       { name: "📻Soundscape", url: "https://soundscape.world/" },
+      { name: "📻Defonic", url: "https://defonic.com/" },
     ],
   },
   {
