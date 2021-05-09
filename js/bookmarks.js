@@ -138,7 +138,7 @@ const bookmarks = [
       //Tools
       { name: "Temp-mail", url: "https://temp-mail.org" },
       { name: "Virustotal", url: "https://www.virustotal.com/" },
-      { name: "Recursos", url: "https://github.com/Alplox/mis-recursos-webdev/blob/main/README.md" },
+      { name: "Recursos", url: "https://alplox.github.io/mis-recursos-webdev/" },
       { name: "G Translate", url: "https://translate.google.com/" },
       { name: "D Translate", url: "https://www.deepl.com/en/translator" },
       { name: "Photopea", url: "https://www.photopea.com/" },
