@@ -123,6 +123,8 @@ const bookmarks = [
       { name: "📻Listen.moe", url: "https://listen.moe/" },
       { name: "📻Di.fm", url: "https://www.di.fm/" },
       { name: "📻Deko.fm/", url: "https://deko.fm/" },
+      { name: "📻rofi", url: "https://rofi.vercel.app/" },
+      { name: "📻loficlub", url: "https://loficlub.vercel.app/" },
       //Background noise generators
       { name: "📻Asoftmurmur", url: "https://asoftmurmur.com/" },
       { name: "📻Naturemixer", url: "https://naturemixer.com" },
@@ -130,6 +132,7 @@ const bookmarks = [
       { name: "📻Rainymood", url: "https://www.rainymood.com/" },
       { name: "📻Soundscape", url: "https://soundscape.world/" },
       { name: "📻Defonic", url: "https://defonic.com/" },
+      { name: "📻Rainbowhunt", url: "https://rainbowhunt.com/" },
     ],
   },
   {
