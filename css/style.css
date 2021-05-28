@@ -4,26 +4,30 @@
 }
 
 :root {
-  --backgroundColor: #0f0f12;            /* background colour  */
+  --bg: #0f0f12;  
+  --white: #ffffff;  
+  --Orange: #b94b3c;
+  --footer: cornsilk;   
+
   --wallpaper: url("../img/Chemical-Convection\ by\ teundenouden.jpeg"); 
 /* tried some other from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
-  --fontFamilyBookmark: 'Roboto Mono', Helvetica;
-  --containerBg: #272727;                /* colour container bookmarks */
-  --secondaryFg: #b3b3b3;                /* colour text bookmarks */
-  --fg: #ffffff;                         /* colour for hover in bookmarks and datetime fonts */
-  --scrollbarColor: #3f3f3f;             /* colour scrollbar in bookmarks */
-  /*--fontColorWidgetIP: #573c3c;           the color for the widget with your IP */
-  --colorAM-PM: #b94b3c;                 /* color background AM/PM display */
+                 
+  --fontFamily: 'Roboto Mono', Helvetica, Arial;
+  --fontModal-datetime: "Segoe UI", sans-serif;
+
+  --searchengines: #b9c3b3;             
+  --bookmarksBG: #272727;                
+  --bookmarkstext: #b3b3b3;                               
+  --scrollbarColor: #3f3f3f;   
+
+
 }
 
-html,
 body {
-  min-height: 100%;
   margin: 0;
-}
-
-body {
-  background-color: var(--backgroundColor);
+  padding: 0;
+  font-family: var(--fontFamily);
+  background-color: var(--bg);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23585858' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -65,13 +69,11 @@ body {
 
 .bookmark-set {
   padding: 1em;
-  background-color: var(--containerBg);
+  background-color: var(--bookmarksBG);
   border-radius: 3px;
-  font-family: var(--fontFamilyBookmark);
   font-size: 0.85rem;
   width: 25%;
-  height: 20em;
-  /* 12 por defecto; aca se cambia el largo de los bookmarks*/
+  height: 20em;             /* 12 por defecto; aca se cambia el largo de los bookmarks*/
   margin: 0em 0.5em;
   box-sizing: border-box;
 }
@@ -111,87 +113,60 @@ body {
 .bookmark-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--fg);
+  color: var(--white);
   margin: 0em 0em 0.35em 0em;
 }
 
 .bookmark {
   text-decoration: none;
-  color: var(--secondaryFg);
+  color: var(--bookmarkstext);
   display: block;
   margin: 0.5em 0em;
 }
 
 .bookmark:hover {
-  color: var(--fg);
+  color: var(--white);
 }
-
 
 /*  Wallpaper */
 .image {
   position: relative;
   width: 100%;
-  /* 50%*/
   height: 30vh;
   margin: 5% 0 0 0;
-  /* border-radius: 3px; */
   background: var(--wallpaper);
   background-size: 100%;
   background-position: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
-  border: 1px solid #b94b3c;
+  outline: 1px solid var(--Orange);
   box-shadow: inset 0 0 100em #000000;
 }
 
 .image:hover {
   box-shadow: 0 0 30px #e3c292;
-  border: 1px solid #b9c3b3;
+  outline: 1px solid #b9c3b3;
 }
 
 /* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
-
-
 .image:hover .mention-wallpaper {
   opacity: 100%;
 }
 
-.image:hover #myBtn {
+.image:hover #Btn_skull {
   background-color: #3caab9;
 }
 
-.image:hover #skull {
-  color: black;
+.image:hover .datetime {
+  box-shadow: inset 0 0 15px 5px rgba(0,0,0,0.75);
 }
-
-.image:hover .date {
-  text-shadow: 5px 5px 5px #000000;
-  -webkit-text-stroke: 0.7px black;
-  color: #ffffff;
-  
-  font-weight: 400;
-}
-
-/* 
-.image:hover .weather-container {
-  visibility: visible;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  cursor: default;
-}
-*/
 
 .datetime {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--fg);
-  font-family: "Segoe UI", sans-serif;
+  color: var(--white);
+  font-family: var(--fontModal-datetime);
   width: 100%;
   height: 100%;
 }
@@ -218,7 +193,7 @@ body {
 }
 
 .time span:last-child {
-  background: var(--colorAM-PM);
+  background: var(--Orange);
   font-size: 30%;
   font-weight: 200;
   text-transform: uppercase;
@@ -226,13 +201,6 @@ body {
   padding: 0 5px;
   border-radius: 5px;
 }
-
-/*
-.weather-container {
-  visibility: hidden;
-  position: absolute;
-}
-*/
 
 .mention-wallpaper {
   background-color: #442621;
@@ -249,7 +217,6 @@ body {
   font-weight: 700;
 }
 
-
 /* SEARCHBAR */
 .searchbar {
   display: flex;
@@ -260,7 +227,7 @@ body {
 }
 
 .searchbox {
-  color: #D8DEE9;
+  color: var(--white);
   background-color: rgba(39, 39, 39, .5);
   border: 1px solid transparent;
   border-radius: 4px;
@@ -268,7 +235,7 @@ body {
 }
 
 .searchbar input:focus {
-  color: #E5E9F0;
+  color: var(--white);
   background-color: rgba(68, 38, 33, .7);
 }
 
@@ -279,7 +246,7 @@ input:focus {
 
 .search-engines {
   border-radius: 0.25rem;
-  color: var(--secondaryFg);
+  color: var(--searchengines);
   list-style: none;
   display: flex;
   padding: 0;
@@ -301,7 +268,7 @@ input:focus {
 }
 
 .search-engines li.active {
-  color: #b94b3c;
+  color: var(--Orange);
   font-weight: 700;
 }
 
@@ -353,21 +320,14 @@ input:focus {
 }
 
 /* "footer" */
-.widget-ip {
-  color: var(--fontColorWidgetIP);
-  font-size: 14px;
-  text-align: center;
-}
-
 .footer-message {
-  color: cornsilk;
+  color: var(--footer);
   font-size: 12px;
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
 }
 
 /* button for the credits */
-#myBtn {
+#Btn_skull {
   position: absolute;
   top: 2px;
   right: 5px;
@@ -387,24 +347,23 @@ input:focus {
   width: 19px;
 }
 
-
 /* MODAL https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
   padding-top: 100px;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
-  height: 80vh;
+  height: 80%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: var(--white);;
   margin: auto;
   padding: 0;
   border: 1px solid rgb(0, 0, 0);
@@ -441,7 +400,7 @@ input:focus {
 }
 
 .close {
-  color: var(--fg);
+  color: var(--white);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -456,19 +415,15 @@ input:focus {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #b94b3c;
-  color: var(--fg);
-  font-family: "Segoe UI", sans-serif;
+  background-color: var(--Orange);
+  color: var(--white);
+  font-family: var(--fontModal-datetime);
 }
 
 .modal-body {
   padding: 2px 16px;
   text-align: justify;
-  font-family: "Segoe UI", sans-serif;
-}
-
-.tachado {
-  text-decoration: line-through;
+  font-family: var(--fontModal-datetime);
 }
 
 .modal-footer {
@@ -477,16 +432,16 @@ input:focus {
   align-items: center;
   padding: 2px 16px;
   background-color: #333;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--fontModal-datetime);
 }
 
 .repo-github {
   text-decoration: none;
-  color: var(--secondaryFg);
+  color: #000 ;
 }
 
 .repo-github:hover {
-  color: var(--fg);
+  color: var(--white);
 }
 
 .logo-github-small {
@@ -505,149 +460,68 @@ input:focus {
   text-decoration: none;
 }
 
-
-
-/* Tooltip https://codepen.io/cristina-silva/pen/XXOpga */
-.label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tooltip-toggle {
-  position: relative;
-}
-
-.tooltip-toggle::before {
-  position: absolute;
-  top: -80px;
-  left: -55px;
-  background-color: var(--fontColorWidgetIP);
-  border-radius: 5px;
-  color: #fff;
-  content: attr(aria-label);
-  padding: 1rem;
-  text-transform: none;
-  transition: all 0.5s ease;
-  width: 160px;
-}
-
-.tooltip-toggle::after {
-  position: absolute;
-  top: -12px;
-  left: 40px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #2b222a;
-  content: " ";
-  font-size: 0;
-  line-height: 0;
-  margin-left: -5px;
-  width: 0;
-}
-
-.tooltip-toggle::before,
-.tooltip-toggle::after {
-  color: #efefef;
-  font-family: monospace;
-  font-size: 16px;
-  opacity: 0;
-  pointer-events: none;
-  text-align: center;
-}
-
-.tooltip-toggle:focus::before,
-.tooltip-toggle:focus::after,
-.tooltip-toggle:hover::before,
-.tooltip-toggle:hover::after {
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-
 /* My attempt to make it responsive */
 @media screen and (max-width: 767px) {
   .no-js {
     font-size: 150%;
   }
-
   .image {
     width: 100%;
-    /* 50% */
     margin: 3% 0 0 0;
     background-size: 150%;
     background-repeat: repeat;
   }
-
   /* https://stackoverflow.com/questions/14431411/pure-css-to-make-font-size-responsive-based-on-dynamic-amount-of-characters */
   .time {
     font-size: 15vw;
-    /* 7vw */
   }
-
   .time span:last-child {
     font-size: 5vw;
-    /* 3vw */
   }
-
   .date {
     font-size: 5vw;
-    /* 3vw */
   }
-
   .mention {
     font-size: 10px;
   }
-
   #bookmark-container {
     display: grid;
     flex-direction: column;
     width: 100%;
     margin: 1em 0em;
   }
-
   .bookmark-set {
     border-radius: 3px;
     font-size: 0.8rem;
     width: 95vw;
     height: 10.5em;
-    /* 12 por defecto; aca se cambia el largo de los bookmarks*/
     margin: 0.5em 0.5em;
     box-sizing: border-box;
   }
-
   .bookmark-set:first-child {
     margin: 0em 0em 0.5rem 0.5em;
   }
-
   .bookmark-set:last-child {
     margin: 0.5em 0em 0rem 0.5em;
   }
-
   .modal-content {
     width: 80%;
   }
-
   .searchbar {
     width: 70%;
   }
 }
-
 /* https://stackoverflow.com/questions/42415141/what-is-the-media-query-for-large-desktops/42415313 */
 @media screen and (min-width: 768px) {
-
   /* "desktop" */
   .time {
     font-size: 600%;
   }
-
   .date {
     font-size: 200%;
   }
 }
-
 @media screen and (min-width: 2048px) {
-
   /* 2k and bigger */
   .time {
     font-size: 1000%;
