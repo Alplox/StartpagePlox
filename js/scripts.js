@@ -91,7 +91,7 @@ function setupBookmarks() {
       html.push(
         ...b.links.map(
           (l) =>
-            `<a class="bookmark" href="${l.url}" target="_blank">${l.name}</a>`
+            `<a class="bookmark" href="${l.url}">${l.name}</a>`
         )
       );
       html.push("</div></div>");
