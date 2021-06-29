@@ -4,7 +4,7 @@ I wanted a startpage so I made one
 [Live](https://alplox.github.io/StartpagePlox/)
 
 ## Preview
-[![](https://raw.githubusercontent.com/Alplox/StartpagePlox/master/StartpagePlox.png)](https://alplox.github.io/StartpagePlox/)
+[![](https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png)](https://alplox.github.io/StartpagePlox/)
 This is the first project I did from scratch while learning HTML, CSS, and JavaScript.
 
 I took inspiration from a lot of sources and end it mixing components from a few startpages that I found (as you can see in the [LICENSE](https://github.com/Alplox/StartpagePlox/blob/main/LICENSE) doc).
