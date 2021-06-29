@@ -3,12 +3,27 @@
  * StartpagePlox by Alplox
  * https://github.com/Alplox/StartpagePlox
 -->
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
     <title>/A\</title>
+    <meta name="title" content="/A\">
     <meta name="description" content="Startpage de Alplox">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alplox.github.io/StartpagePlox/">
+    <meta property="og:title" content="/A\">
+    <meta property="og:description" content="Startpage de Alplox">
+    <meta property="og:image" content="https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alplox.github.io/StartpagePlox/">
+    <meta property="twitter:title" content="/A\">
+    <meta property="twitter:description" content="Startpage de Alplox">
+    <meta property="twitter:image" content="https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png">
     <base target="_blank">
     <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
@@ -25,14 +40,14 @@
         </div>
     </noscript>
 
-    <div class="container">
-        <div class="image">
+    <main class="container">
+        <section class="image">
             <!-- Trigger/Open The Modal -->
             <button id="Btn_skull">
                 <span class="skull"></span>
             </button>
             <!--clock-->
-            <div class="datetime ">
+            <div class="datetime">
                 <div class="time">
                     <span id="hour">00</span>:<span id="minutes">00</span>:
                     <span id="seconds">00</span>
@@ -44,29 +59,44 @@
                     <span id="daynum">00</span>,
                     <span id="year">Year</span>
                 </div>
-                <div class="mention-wallpaper">
-                    <a class="links-wallpaper"
-                        href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684"
-                       >Chemical Convection</a> by <a class="links-wallpaper"
-                        href="https://www.deviantart.com/teundenouden/">teundenouden</a>
-                </div>
             </div>
-            <!---->
-        </div>
+            <span class="mention-wallpaper">
+                <p><a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684">Chemical
+                        Convection</a> by <a href="https://www.deviantart.com/teundenouden/">teundenouden</a></p>
+            </span>
+        </section>
 
         <!--Searchbar-->
-        <div id="search" class="searchbar">
-            <input type="text" class="searchbox" name="q" title="Search (Qwant by default)" placeholder="Search..."
+        <section id="search" class="searchbar">
+            <input type="text" class="searchbox" name="q" title="Searchbar" placeholder="Search (Qwant by default)..."
                 id="main-search" spellcheck="false" autocomplete="off" size="40" maxlength="255" />
             <ul class="search-engines"></ul>
+        </section>
+
+        <!-- <section id="bookmark-container"></section> -->
+        <div class="table-container">
+            <div class="col-container">
+                <div class="tab active" data-tab="tab-1"></div>
+                <div class="tab" data-tab="tab-2"></div>
+                <div class="tab" data-tab="tab-3"></div>
+                <div class="tab" data-tab="tab-4"></div>
+                <div class="tab" data-tab="tab-5"></div>
+                <div class="tab" data-tab="tab-6"></div>
+            </div>
+
+            <div class="col-container">
+                <div class="content active" data-tab="tab-1"></div>
+                <div class="content" data-tab="tab-2"></div>
+                <div class="content" data-tab="tab-3"></div>
+                <div class="content" data-tab="tab-4"></div>
+                <div class="content" data-tab="tab-5"></div>
+                <div class="content" data-tab="tab-6"></div>
+            </div>
         </div>
-        <!---->
-        <ul class="search-engines"></ul>
-        <div id="bookmark-container"></div>
-    </div>
+    </main>
 
     <!--Write something else idk-->
-    <div class="footer-message">wena wena</div>
+    <footer class="footer-message">wena wena</footer>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -77,65 +107,62 @@
             </div>
             <div class="modal-body">
                 <h2>This is the first project I did from scratch while learning HTML, CSS, and JavaScript.</h2>
-                <h3>Here you will find the sources for some of the things that I used while making this startpage</h3>
-                <p>*This same list can be found in the <a class="links-modal"
+                <h3>Here are some of the sites from where I took stuff to make this startpage</h3>
+                <p>*This same list can be found in the <a
                         href="https://github.com/Alplox/StartpagePlox/blob/main/LICENSE">LICENSE</a> file in
-                    the <a class="links-modal" href="https://github.com/Alplox/StartpagePlox">repository
+                    the <a href="https://github.com/Alplox/StartpagePlox">repository
                     </a>
-                     <span class="logo-github-small"></span>.
+                    <span class="logo-github-small"></span>.
                 </p>
                 <h4>Mentions:</h4>
-                <p>&#8226;Code and style for "bookmark-container" based on <a class="links-modal"
-                        href="https://github.com/Jaredk3nt/homepage"
-                       >https://github.com/Jaredk3nt/homepage</a></p>
-                <p>&#8226;Code and style for "datetime" based on <a class="links-modal"
-                        href="https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html"
-                       >https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html</a></p>
-                <p>&#8226;Code and style for "wave" based on <a class="links-modal" href="https://github.com/0-l/aqua"
-                       >https://github.com/0-l/aqua</a></p>
-                <p>&#8226;Code and style for "searchbar" based on <a class="links-modal"
-                        href="https://codepen.io/cristina-silva/pen/XXOpga"
-                       >https://github.com/TB-96/Evening-Startpage</a></p>
-                <p>&#8226;Favicon created using this site <a class="links-modal"
-                        href="https://favicon.io/"
-                       >https://favicon.io/</a></p>
-                <h4>Copyrighted Work:</h4>
-                <p>&#8226;SVG Background from <a class="links-modal" href="https://www.heropatterns.com"
-                       >https://www.heropatterns.com</a></p>
-                <p>&#8226;Chemical Convection By teundenouden <a class="links-modal"
-                        href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684"
-                       >https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684</a>
+                <p>&#8226;Code and style for "datetime" based on <a
+                        href="https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html">https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html</a>
                 </p>
-                <p>&#8226;Icons from <a class="links-modal" href="https://ionicons.com"
-                       >https://ionicons.com</a></p>
-                <p>&#8226;Roboto Mono font from <a class="links-modal"
-                        href="https://fonts.google.com/"
-                       >https://fonts.google.com/</a></p>
+                <p>&#8226;Code and style for "wave" based on <a
+                        href="https://github.com/0-l/aqua">https://github.com/0-l/aqua</a></p>
+                <p>&#8226;Code and style for "searchbar" based on <a
+                        href="https://codepen.io/cristina-silva/pen/XXOpga">https://github.com/TB-96/Evening-Startpage</a>
+                </p>
+                <p>&#8226;Favicon created using this site <a href="https://favicon.io/">https://favicon.io/</a></p>
+                <h4>Copyrighted Work:</h4>
+                <p>&#8226;SVG Background from <a href="https://www.heropatterns.com">https://www.heropatterns.com</a>
+                </p>
+                <p>&#8226;Chemical Convection By teundenouden <a
+                        href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684">https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684</a>
+                </p>
+                <p>&#8226;Icons from <a href="https://ionicons.com">https://ionicons.com</a></p>
+                <p>&#8226;Roboto Mono font from <a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+                <p>&#8226;Code and style for "table-container" based on <a
+                        href="https://github.com/MrAlpha786/getstarted">https://github.com/MrAlpha786/getstarted</a></p>
                 <hr>
-                <p>Copyright (c) 2021 by Alplox</p>
-                <p>Permission is hereby granted, free of charge, to any person obtaining a copy
-                    of this software and associated documentation files (the "Software"), to deal
-                    in the Software without restriction, including without limitation the rights
-                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                    copies of the Software, and to permit persons to whom the Software is
-                    furnished to do so, subject to the following conditions:</p>
-                <p>The above copyright notice and this permission notice shall be included in
-                    all copies or substantial portions of the Software.</p>
-                <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-                    THE SOFTWARE.</p>
+                <span class="license">
+                    <p>Copyright (c) 2021 by Alplox</p>
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the "Software"), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:</p>
+                    <p>The above copyright notice and this permission notice shall be included in
+                        all copies or substantial portions of the Software.</p>
+                    <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                        THE SOFTWARE.</p>
+                </span>
             </div>
-            <div class="modal-footer">
-                 <span class="logo-github-large"></span>&#8212;<span><a href="https://github.com/Alplox/StartpagePlox" class="repo-github">StartpagePlox by Alplox</a></span>
-            </div>
+            <footer class="modal-footer">
+                <span class="logo-github-large"></span>&#8212;<span><a href="https://github.com/Alplox/StartpagePlox"
+                        class="repo-github">StartpagePlox by Alplox</a></span>
+            </footer>
         </div>
     </div>
 
-    <script rel="preload" src="js/bookmarks.js"></script>
+    <script src="js/bookmarks.js"></script>
     <script rel="preload" src="js/scripts.js"></script>
 </body>
+
 </html>

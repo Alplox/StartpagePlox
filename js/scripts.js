@@ -79,29 +79,38 @@ function initClock() {
 
 initClock();
 
-// https://github.com/Jaredk3nt/homepage
-// Handle writing out Bookmarks
-function setupBookmarks() {
-  const bookmarkContainer = document.getElementById("bookmark-container");
-  bookmarkContainer.innerHTML = bookmarks
-    .map((b) => {
-      const html = ["<div class='bookmark-set'>"];
-      html.push(`<div class="bookmark-title">${b.title}</div>`);
-      html.push('<div class="bookmark-inner-container">');
-      html.push(
-        ...b.links.map(
-          (l) =>
-            `<a class="bookmark" href="${l.url}">${l.name}</a>`
-        )
-      );
-      html.push("</div></div>");
-      return html.join("");
+//Bookmark Table
+var tabs = document.querySelectorAll('.tab');
+var contents = document.querySelectorAll('.content');
+
+for (let i=0; i<tabs.length; i++){
+
+    tabs[i].innerHTML = cards[i].name;
+
+    var sites = Object.keys(cards[i].bookmarks);
+    //Populate content with bookmarks
+    for (let j=0; j<sites.length; j++){
+
+        var a_link = document.createElement('a');
+        a_link.innerHTML = sites[j];
+        a_link.href = cards[i].bookmarks[sites[j]];
+
+        contents[i].appendChild(a_link);
+    }
+
+    // Make tab active on mouse click
+    tabs[i].addEventListener('mouseenter', function(){
+        for (let j=0; j<tabs.length; j++){
+            tabs[j].classList.remove('active');
+        }
+        tabs[i].classList.add('active');
+
+        for (let j=0; j<contents.length; j++){
+            contents[j].classList.remove('active');
+        }
+        contents[i].classList.add('active');
     })
-    .join("");
 }
-window.onload = () => {
-  setupBookmarks();
-};
 
 // MODAL https://www.w3schools.com/howto/howto_css_modals.asp
 var modal = document.getElementById("myModal");

@@ -6,12 +6,12 @@ I wanted a startpage so I made one
 ## Preview
 [![](https://raw.githubusercontent.com/Alplox/StartpagePlox/master/StartpagePlox.png)](https://alplox.github.io/StartpagePlox/)
 This is the first project I did from scratch while learning HTML, CSS, and JavaScript.
+
 I took inspiration from a lot of sources and end it mixing components from a few startpages that I found (as you can see in the [LICENSE](https://github.com/Alplox/StartpagePlox/blob/main/LICENSE) doc).
 
-## Here you will find the sources for some of the things that I used while making this startpage
+## Here are some of the sites from where I took stuff to make this startpage
 *This same list can be found, again, in the [LICENSE](https://github.com/Alplox/StartpagePlox/blob/main/LICENSE) file of the repository.
 ### Mentions:
-- Code and style for "bookmark-container" based on https://github.com/Jaredk3nt/homepage
 - Code and style for "datetime" based on https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
 - Code and style for "wave" based on https://github.com/0-l/aqua
 - Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
@@ -22,7 +22,7 @@ I took inspiration from a lot of sources and end it mixing components from a few
 - Chemical Convection By teundenouden https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684
 - Icons from https://ionicons.com/
 - Roboto Mono font from https://fonts.google.com/
-
+- "table-container" based on https://github.com/MrAlpha786/getstarted
 ## License
 ```
 MIT License

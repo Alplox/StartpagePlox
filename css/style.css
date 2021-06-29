@@ -1,229 +1,232 @@
+
+/* https://github.com/AllThingsSmitty/css-protips/tree/master/translations/es-ES#compruebe-si-la-fuente-est%C3%A1-instalada-localmente */
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('../Font/RobotoMono-VariableFont_wght.ttf');
+  src:
+    local('Roboto Mono'),
+    url("../Font/RobotoMono-VariableFont_wght.ttf");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-  --bg: #0f0f12;  
-  --white: #ffffff;  
-  --Orange: #b94b3c;
-  --footer: cornsilk;   
+  font-size: 16px;
+  font-display: swap;
+  font-family: 'Roboto Mono', Helvetica, Arial;
+  --font-Modal: "Segoe UI", sans-serif;
+  
+  --black: #000000;
+  --grey: #b3b3b3;
+  --white: #ffffff;
+  
+  --orange: #b94b3c;
+  --brown: #442621;
+  --bookmarksBG: #272727;
+ /* Bookmarks colors */
+  --red: #800400;
+  --green: #037e0d;
+  --yellow: #6e4a00;
+  --purple: #3c018a;
+  --pink: #99646d;
+  --blue: #00747c;
 
+/* tried some other wallpaper from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
   --wallpaper: url("../img/Chemical-Convection\ by\ teundenouden.jpeg"); 
-/* tried some other from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
-                 
-  --fontFamily: 'Roboto Mono', Helvetica, Arial;
-  --fontModal-datetime: "Segoe UI", sans-serif;
-
-  --searchengines: #b9c3b3;             
-  --bookmarksBG: #272727;                
-  --bookmarkstext: #b3b3b3;                               
-  --scrollbarColor: #3f3f3f;   
-
-
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--fontFamily);
-  background-color: var(--bg);
+  background-color: var(--black);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23585858' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 .no-js {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-  display: flex;
-  align-items: center;
-  position: fixed;
+  font-size: clamp(14px, calc(1rem + 1vw), 2vw);
   z-index: 1;
+  position: fixed;
   overflow: hidden;
-  justify-content: center;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #000000;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background-image: -o-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
-/* Bookmarks*/
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.inline {
-  display: inline-block;
-}
-
-#bookmark-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 50%;
-  margin: 0em;
-}
-
-.bookmark-set {
-  padding: 1em;
-  background-color: var(--bookmarksBG);
-  border-radius: 3px;
-  font-size: 0.85rem;
-  width: 25%;
-  height: 20em;             /* 12 por defecto; aca se cambia el largo de los bookmarks*/
-  margin: 0em 0.5em;
-  box-sizing: border-box;
-}
-
-.bookmark-set:first-child {
-  margin: 0em 0.5em 0rem 0em;
-}
-
-.bookmark-set:last-child {
-  margin: 0em 0em 0rem 0.5em;
-}
-
-.bookmark-inner-container {
-  overflow-y: scroll;
-  height: 85%;
-  vertical-align: top;
-  padding-right: 6px;
-  box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbarColor) #ffffff00;
-}
-
-.bookmark-inner-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.bookmark-inner-container::-webkit-scrollbar-track {
-  background: #ffffff00;
-}
-
-.bookmark-inner-container::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbarColor);
-  border-radius: 6px;
-  border: 3px solid #ffffff00;
-}
-
-.bookmark-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--white);
-  margin: 0em 0em 0.35em 0em;
-}
-
-.bookmark {
-  text-decoration: none;
-  color: var(--bookmarkstext);
-  display: block;
-  margin: 0.5em 0em;
-}
-
-.bookmark:hover {
-  color: var(--white);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*  Wallpaper */
 .image {
-  position: relative;
-  width: 100%;
-  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 5% 0 0 0;
+  width: 100%;
   background: var(--wallpaper);
-  background-size: 100%;
-  background-position: center;
+  background-size: cover;
+  background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
-  outline: 1px solid var(--Orange);
-  box-shadow: inset 0 0 100em #000000;
+  outline: 1px solid var(--orange);
+  -webkit-box-shadow: inset 0 0 100vw var(--black);
+          box-shadow: inset 0 0 100vw var(--black);
 }
 
 .image:hover {
-  box-shadow: 0 0 30px #e3c292;
-  outline: 1px solid #b9c3b3;
+  -webkit-box-shadow: 0 0 30px var(--grey);
+          box-shadow: 0 0 30px var(--grey);
+  outline: 1px solid var(--white);
+}
+
+.image:hover #Btn_skull {
+  background-color: var(--blue);
+  opacity: 1;
 }
 
 /* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
 .image:hover .mention-wallpaper {
-  opacity: 100%;
+  opacity: 1;
 }
 
-.image:hover #Btn_skull {
-  background-color: #3caab9;
+/* button for the credits */
+#Btn_skull {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  background-color: var(--grey);
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  opacity: 0.5;
 }
 
-.image:hover .datetime {
-  box-shadow: inset 0 0 15px 5px rgba(0,0,0,0.75);
+.skull {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3ESkull%3C/title%3E%3Cpath d='M448 225.64v99a64 64 0 01-40.23 59.42l-23.68 9.47A32 32 0 00364.6 417l-10 50.14A16 16 0 01338.88 480H173.12a16 16 0 01-15.69-12.86L147.4 417a32 32 0 00-19.49-23.44l-23.68-9.47A64 64 0 0164 324.67V224c0-105.92 85.77-191.81 191.65-192S448 119.85 448 225.64z' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Ccircle cx='168' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Ccircle cx='344' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 336l-16 48h32l-16-48zM256 448v32M208 448v32M304 448v32'/%3E%3C/svg%3E");
+  padding: 10% 0 0 0;
+  height: 19px;
+  width: 19px;
 }
 
 .datetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: var(--white);
-  font-family: var(--fontModal-datetime);
-  width: 100%;
-  height: 100%;
-}
-
-.date {
-  text-shadow: 5px 5px 5px #000000;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 1px;
+  font-family: var(--font-Modal);
+  text-shadow: 0.125rem 0.125rem 0.125rem var(--black);
 }
 
 .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.time span:not(:last-child) {
-  text-shadow: 2px 3px #442621;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: clamp(24px, calc(4rem + 1vw), 40vw);
   margin: 0 6px;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 1px;
 }
 
 .time span:last-child {
-  background: var(--Orange);
-  font-size: 30%;
-  font-weight: 200;
+  background: var(--orange);
+  font-size: calc(1rem + 1vw);
   text-transform: uppercase;
-  margin-top: 10px;
-  padding: 0 5px;
+  padding: 0 5px 0 5px;
   border-radius: 5px;
 }
 
-.mention-wallpaper {
-  background-color: #442621;
-  bottom: 0px;
-  right: 3px;
-  font-size: 12px;
-  position: absolute;
-  opacity: 50%;
+.date {
+  font-size: calc(1rem + 1vw);
 }
 
-.links-wallpaper {
-  text-decoration: none;
-  color: #b9c3b3;
+.mention-wallpaper {
+  margin-top: 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  background-color: var(--brown);
+  color: var(--grey);
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.mention-wallpaper a {
+  color: var(--grey);
   font-weight: 700;
 }
 
 /* SEARCHBAR */
 .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  margin: 0.5em 0em 0em 0em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: clamp(300px, 50%, 61%);
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0 1rem 0;
 }
 
 .searchbox {
@@ -245,38 +248,208 @@ input:focus {
 }
 
 .search-engines {
-  border-radius: 0.25rem;
-  color: var(--searchengines);
-  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  justify-content: center;
-  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  border-radius: 0.25rem;
+  color: var(--grey);
+  list-style: none;
 }
 
 .search-engines li:first-child {
-  margin: 0 1em 0 1em;
-}
-
-.search-engines li:last-child {
-  margin: 0;
+  margin: 0 1rem 0 1rem;
 }
 
 .search-engines li {
-  margin: 0 1em 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .search-engines li.active {
-  color: var(--Orange);
+  color: var(--orange);
   font-weight: 700;
 }
 
 .search-engines li p {
   cursor: default;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
   transition: all .2s;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
+
+/* Bookmarks */
+.table-container {
+	width: clamp(50%, 61%, 80%);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.col-container {
+  width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.tab {
+  margin: 0 1%;
+  font-size: calc(1rem + 0.3vh);
+  background-color: var(--bookmarksBG);
+  border-radius: 5px 5px 0 0;
+  width: calc(100% / 6);
+  padding: 0.5rem;
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-orient: vertical; 
+  -webkit-box-direction: normal; 
+      -ms-flex-direction: column; 
+          flex-direction: column;
+  max-height: 34vh;
+  background-color: var(--bookmarksBG);
+  width: calc(100% / 6);
+  margin: 0 1%;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  word-wrap: break-word;
+  font-size: calc(0.7rem + 0.3vh);
+}
+
+.content::-webkit-scrollbar {
+  background-color: var(--grey);
+  width: 2px;
+}
+
+.content > a {
+  color: var(--grey);
+	padding: 4px;
+	cursor: pointer;
+}
+
+/* Colors */
+.tab[data-tab*="1"] {
+  color: var(--red);
+}
+
+.tab[data-tab*="2"] {
+  color: var(--green);
+}
+
+.tab[data-tab*="3"] {
+  color: var(--yellow);
+}
+
+.tab[data-tab*="4"] {
+  color: var(--purple);
+}
+
+.tab[data-tab*="5"] {
+  color: var(--pink);
+}
+
+.tab[data-tab*="6"] {
+  color: var(--blue);
+}
+
+.content[data-tab*="1"] a:hover {
+  background-color: var(--red);
+}
+
+.content[data-tab*="2"] a:hover {
+  background-color: var(--green);
+}
+
+.content[data-tab*="3"] a:hover {
+  background-color: var(--yellow);
+}
+
+.content[data-tab*="4"] a:hover {
+  background-color: var(--purple);
+}
+
+.content[data-tab*="5"] a:hover {
+  background-color: var(--pink);
+}
+
+.content[data-tab*="6"] a:hover {
+  background-color: var(--blue);
+}
+
+@media screen and (max-width: 700px) {
+  .tab {
+    margin: 0;
+    border-radius: 0;
+    font-size: calc(1rem - 0.5vh);
+  }
+  .tab:first-child{
+    border-radius: 5px 0 0 0;
+  }
+  .tab:last-child{
+    border-radius: 0 5px 0 0;
+  }
+
+	.content, .content.active {
+    margin: 0;
+    display: none;
+    flex-direction: column;
+  }
+
+  .tab.active[data-tab*="1"] {
+    color: var(--grey);
+    background-color: var(--red);
+  }
+  
+  .tab.active[data-tab*="2"] {
+    color: var(--grey);
+    background-color: var(--green);
+  }
+  
+  .tab.active[data-tab*="3"] {
+    color: var(--grey);
+    background-color: var(--yellow);
+  }
+  
+  .tab.active[data-tab*="4"] {
+    color: var(--grey);
+    background-color: var(--purple);
+  }
+  
+  .tab.active[data-tab*="5"] {
+    color: var(--grey);
+    background-color: var(--pink);
+  }
+  
+  .tab.active[data-tab*="6"] {
+    color: var(--grey);
+    background-color: var(--blue);
+  }
+
+  .content.active {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+
+
 
 /* background animation when noscript is active */
 .wave,
@@ -289,90 +462,90 @@ input:focus {
   width: 250vw;
   height: 250vw;
   margin-left: -125vw;
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 32, 41, 0.2)), to(transparent));
+  background: -o-linear-gradient(top, rgba(102, 32, 41, 0.2), transparent);
   background: linear-gradient(to bottom, rgba(102, 32, 41, 0.2), transparent);
   border-radius: 38% 42%;
-  animation: spin 36s infinite linear;
+  -webkit-animation: spin 36s infinite linear;
+          animation: spin 36s infinite linear;
 }
 
 .wave::before {
   width: 105%;
   height: 95%;
   margin-top: -125vw;
-  transform-origin: 49% 51%;
+  -webkit-transform-origin: 49% 51%;
+      -ms-transform-origin: 49% 51%;
+          transform-origin: 49% 51%;
   border-radius: 40% 38%;
-  animation: spin 20s infinite linear;
+  -webkit-animation: spin 20s infinite linear;
+          animation: spin 20s infinite linear;
 }
 
 .wave::after {
   width: 102%;
   height: 98%;
   margin-top: -125vw;
-  transform-origin: 51% 49%;
+  -webkit-transform-origin: 51% 49%;
+      -ms-transform-origin: 51% 49%;
+          transform-origin: 51% 49%;
   border-radius: 48% 42%;
-  animation: spin 40s infinite linear;
+  -webkit-animation: spin 40s infinite linear;
+          animation: spin 40s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 /* "footer" */
 .footer-message {
-  color: var(--footer);
-  font-size: 12px;
+  color: var(--white);
+  font-size: clamp(0.5rem, 0.8rem, 1rem);
   text-align: center;
-}
-
-/* button for the credits */
-#Btn_skull {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-  background-color: #333;
-  padding: 0%;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
-  cursor: pointer;
-}
-
-.skull {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3ESkull%3C/title%3E%3Cpath d='M448 225.64v99a64 64 0 01-40.23 59.42l-23.68 9.47A32 32 0 00364.6 417l-10 50.14A16 16 0 01338.88 480H173.12a16 16 0 01-15.69-12.86L147.4 417a32 32 0 00-19.49-23.44l-23.68-9.47A64 64 0 0164 324.67V224c0-105.92 85.77-191.81 191.65-192S448 119.85 448 225.64z' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Ccircle cx='168' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Ccircle cx='344' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 336l-16 48h32l-16-48zM256 448v32M208 448v32M304 448v32'/%3E%3C/svg%3E");
-  padding: 7%;
-  height: 18px;
-  width: 19px;
 }
 
 /* MODAL https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
 .modal {
   display: none;
   position: fixed;
-  padding-top: 100px;
+  padding: 100px 0 100px 0;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   position: relative;
-  background-color: var(--white);;
+  background-color: var(--white);
   margin: auto;
   padding: 0;
-  border: 1px solid rgb(0, 0, 0);
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid var(--black);
+  width: clamp(50%, 70%, 80%);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+  word-wrap: break-word;
 }
 
 @-webkit-keyframes animatetop {
@@ -402,46 +575,61 @@ input:focus {
 .close {
   color: var(--white);
   float: right;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
+  color: var(--black);
   cursor: pointer;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: var(--Orange);
+  padding: 0.125rem 1rem;
+  background-color: var(--orange);
   color: var(--white);
-  font-family: var(--fontModal-datetime);
+  font-family: var(--font-Modal);
 }
 
 .modal-body {
-  padding: 2px 16px;
+  padding: 0.125rem 1rem;
+  font-family: var(--font-Modal);
+}
+
+.modal-body p{
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.modal-body h2{
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.license {
   text-align: justify;
-  font-family: var(--fontModal-datetime);
 }
 
 .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 16px;
-  background-color: #333;
-  font-family: var(--fontModal-datetime);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.125rem 1rem;
+  background-color: var(--orange);
+  font-family: var(--font-Modal);
 }
 
 .repo-github {
-  text-decoration: none;
-  color: #000 ;
+  color: var(--white);
 }
 
 .repo-github:hover {
-  color: var(--white);
+  color: var(--grey);
 }
 
 .logo-github-small {
@@ -454,76 +642,4 @@ input:focus {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3ELogo Github%3C/title%3E%3Cpath d='M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z'/%3E%3C/svg%3E");
   width: 36px;
   height: 36px;
-}
-
-.links-modal {
-  text-decoration: none;
-}
-
-/* My attempt to make it responsive */
-@media screen and (max-width: 767px) {
-  .no-js {
-    font-size: 150%;
-  }
-  .image {
-    width: 100%;
-    margin: 3% 0 0 0;
-    background-size: 150%;
-    background-repeat: repeat;
-  }
-  /* https://stackoverflow.com/questions/14431411/pure-css-to-make-font-size-responsive-based-on-dynamic-amount-of-characters */
-  .time {
-    font-size: 15vw;
-  }
-  .time span:last-child {
-    font-size: 5vw;
-  }
-  .date {
-    font-size: 5vw;
-  }
-  .mention {
-    font-size: 10px;
-  }
-  #bookmark-container {
-    display: grid;
-    flex-direction: column;
-    width: 100%;
-    margin: 1em 0em;
-  }
-  .bookmark-set {
-    border-radius: 3px;
-    font-size: 0.8rem;
-    width: 95vw;
-    height: 10.5em;
-    margin: 0.5em 0.5em;
-    box-sizing: border-box;
-  }
-  .bookmark-set:first-child {
-    margin: 0em 0em 0.5rem 0.5em;
-  }
-  .bookmark-set:last-child {
-    margin: 0.5em 0em 0rem 0.5em;
-  }
-  .modal-content {
-    width: 80%;
-  }
-  .searchbar {
-    width: 70%;
-  }
-}
-/* https://stackoverflow.com/questions/42415141/what-is-the-media-query-for-large-desktops/42415313 */
-@media screen and (min-width: 768px) {
-  /* "desktop" */
-  .time {
-    font-size: 600%;
-  }
-  .date {
-    font-size: 200%;
-  }
-}
-@media screen and (min-width: 2048px) {
-  /* 2k and bigger */
-  .time {
-    font-size: 1000%;
-  }
 }
