@@ -1,31 +1,20 @@
-// Reloj
-function updateClock() {
-  var now = new Date();
-  var dname = now.getDay(),
-    mo = now.getMonth(),
-    dnum = now.getDate(),
-    yr = now.getFullYear(),
-    hou = now.getHours(),
-    min = now.getMinutes(),
-    sec = now.getSeconds(),
-    pe = "AM";
+/* https://github.com/isai-ismael/reloj-digital */
+setInterval(() => {
+  let fecha = document.getElementById("fecha");
+  let hora = document.getElementById("hora");
+  let periodo = document.getElementById("periodo");
 
-  if (hou >= 12) {
-    pe = "PM";
-  }
-  if (hou == 0) {
-    hou = 12;
-  }
-  if (hou > 12) {
-    hou = hou - 12;
-  }
-
-  Number.prototype.pad = function (digits) {
-    for (var n = this.toString(); n.length < digits; n = 0 + n);
-    return n;
-  };
-
-  var months = [
+  let date = new Date();
+  let semana = [ 
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado"
+  ];
+  let mes = [
     "Enero",
     "Febrero",
     "Marzo",
@@ -37,51 +26,25 @@ function updateClock() {
     "Septiembre",
     "Octubre",
     "Noviembre",
-    "Diciembre",
+    "Diciembre"
   ];
-  var week = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado",
-  ];
-  var ids = [
-    "dayname",
-    "month",
-    "daynum",
-    "year",
-    "hour",
-    "minutes",
-    "seconds",
-    "period",
-  ];
-  var values = [
-    week[dname],
-    dnum.pad(2),
-    months[mo],
-    yr,
-    hou.pad(2),
-    min.pad(2),
-    sec.pad(2),
-    pe,
-  ];
-  for (var i = 0; i < ids.length; i++)
-    document.getElementById(ids[i]).firstChild.nodeValue = values[i];
-}
 
-function initClock() {
-  updateClock();
-  window.setInterval("updateClock()", 1);
-}
+  let diaNuevo;
+  
+  let estado;
+  /* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator */
+  date.getHours() >= 12 ? estado = "PM" : estado = "AM";
+  date.getDate() < 10 ? diaNuevo = `0${date.getDate()}` : diaNuevo = `${date.getDate()}`;
+  
+  fecha.textContent = `${semana[date.getDay()] + ", " + diaNuevo + " " + mes[date.getMonth()] + " " + date.getFullYear()}`;
+  hora.textContent = `${date.toLocaleTimeString()}`;
+  periodo.textContent = `${estado}`;
+}, 1000);
 
-initClock();
 
 //Bookmark Table
-var tabs = document.querySelectorAll('.tab');
-var contents = document.querySelectorAll('.content');
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.content');
 
 for (let i=0; i<tabs.length; i++){
 
@@ -162,7 +125,7 @@ for (var key in engines)
     ".search-engines"
   ).innerHTML += `<li><p title="${engines[key][1]}">!${key}</p></li>`;
 
-document.onkeypress = (e) => {
+document.onkeyup = (e) => {
   if (e.key == "s") search.classList.add("active");
 
   input.focus();

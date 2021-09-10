@@ -1,4 +1,4 @@
-var cards = [
+const cards = [
 	{
     name: "Bruh",
     bookmarks: {

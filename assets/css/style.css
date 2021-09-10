@@ -4,7 +4,7 @@
   font-family: 'Roboto Mono';
   src:
     local('Roboto Mono'),
-    url("../Font/RobotoMono-VariableFont_wght.ttf");
+    url("../font/RobotoMono-VariableFont_wght.ttf");
 }
 
 *,
@@ -20,7 +20,7 @@
   font-size: 16px;
   font-display: swap;
   font-family: 'Roboto Mono', Helvetica, Arial;
-  --font-Modal: "Segoe UI", sans-serif;
+  --alt-font: "Segoe UI", sans-serif, Arial;
   
   --black: #000000;
   --grey: #b3b3b3;
@@ -28,14 +28,16 @@
   
   --orange: #b94b3c;
   --brown: #442621;
+  
+  /* Bookmarks colors */
   --bookmarksBG: #272727;
- /* Bookmarks colors */
-  --red: #800400;
-  --green: #037e0d;
-  --yellow: #6e4a00;
-  --purple: #3c018a;
-  --pink: #99646d;
-  --blue: #00747c;
+  
+  --FirstBM: #800400;
+  --SecondBM: #024c08;
+  --ThirdBM: #6e4a00;
+  --FourthBM: #3c018a;
+  --FifthBM: #99646d;
+  --SixthBM: #00747c;
 
 /* tried some other wallpaper from here https://old.reddit.com/r/Cinemagraphs they look great, I recommend this one https://i.imgur.com/1t9KQjg.gifv */
   --wallpaper: url("../img/Chemical-Convection\ by\ teundenouden.jpeg"); 
@@ -121,7 +123,7 @@ a {
 }
 
 .image:hover #Btn_skull {
-  background-color: var(--blue);
+  background-color: var(--SixthBM);
   opacity: 1;
 }
 
@@ -150,64 +152,56 @@ a {
   width: 19px;
 }
 
-.datetime {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.reloj {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+  align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+.hora,
+.periodo,
+.fecha {
   color: var(--white);
-  font-family: var(--font-Modal);
+  font-family: var(--alt-font);
   text-shadow: 0.125rem 0.125rem 0.125rem var(--black);
 }
 
-.time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.hora {
   font-size: clamp(24px, calc(4rem + 1vw), 40vw);
-  margin: 0 6px;
+  padding: 0 15px;
 }
 
-.time span:last-child {
+.periodo {
   background: var(--orange);
   font-size: calc(1rem + 1vw);
   text-transform: uppercase;
-  padding: 0 5px 0 5px;
+  padding: 0 5px;
   border-radius: 5px;
 }
 
-.date {
-  font-size: calc(1rem + 1vw);
+.fecha{
+  font-size: clamp(24px, calc(1rem + 1vw), 20vw);;
 }
 
 .mention-wallpaper {
+  align-self: flex-end;
+    -ms-flex-item-align: end;
+  justify-self: left;
+    -ms-grid-column-align: left;
   margin-top: 20px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -ms-grid-column-align: left;
-      justify-self: left;
   background-color: var(--brown);
   color: var(--grey);
   font-size: 0.75rem;
   opacity: 0.5;
 }
 
-.mention-wallpaper a {
+.mention-wallpaper a{
   color: var(--grey);
   font-weight: 700;
 }
@@ -283,7 +277,7 @@ input:focus {
 
 /* Bookmarks */
 .table-container {
-	width: clamp(50%, 61%, 80%);
+	width: clamp(65%, 70%, 80%);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -344,51 +338,51 @@ input:focus {
 
 /* Colors */
 .tab[data-tab*="1"] {
-  color: var(--red);
+  color: var(--FirstBM);
 }
 
 .tab[data-tab*="2"] {
-  color: var(--green);
+  color: var(--SecondBM);
 }
 
 .tab[data-tab*="3"] {
-  color: var(--yellow);
+  color: var(--ThirdBM);
 }
 
 .tab[data-tab*="4"] {
-  color: var(--purple);
+  color: var(--FourthBM);
 }
 
 .tab[data-tab*="5"] {
-  color: var(--pink);
+  color: var(--FifthBM);
 }
 
 .tab[data-tab*="6"] {
-  color: var(--blue);
+  color: var(--SixthBM);
 }
 
 .content[data-tab*="1"] a:hover {
-  background-color: var(--red);
+  background-color: var(--FirstBM);
 }
 
 .content[data-tab*="2"] a:hover {
-  background-color: var(--green);
+  background-color: var(--SecondBM);
 }
 
 .content[data-tab*="3"] a:hover {
-  background-color: var(--yellow);
+  background-color: var(--ThirdBM);
 }
 
 .content[data-tab*="4"] a:hover {
-  background-color: var(--purple);
+  background-color: var(--FourthBM);
 }
 
 .content[data-tab*="5"] a:hover {
-  background-color: var(--pink);
+  background-color: var(--FifthBM);
 }
 
 .content[data-tab*="6"] a:hover {
-  background-color: var(--blue);
+  background-color: var(--SixthBM);
 }
 
 @media screen and (max-width: 700px) {
@@ -410,34 +404,37 @@ input:focus {
     flex-direction: column;
   }
 
+  .tab.active[data-tab*="1"],
+  .tab.active[data-tab*="2"],
+  .tab.active[data-tab*="3"],
+  .tab.active[data-tab*="4"],
+  .tab.active[data-tab*="5"],
+  .tab.active[data-tab*="6"]{
+    color: var(--grey)
+  }
+
   .tab.active[data-tab*="1"] {
-    color: var(--grey);
-    background-color: var(--red);
+    background-color: var(--FirstBM);
   }
   
   .tab.active[data-tab*="2"] {
-    color: var(--grey);
-    background-color: var(--green);
+    background-color: var(--SecondBM);
   }
   
   .tab.active[data-tab*="3"] {
-    color: var(--grey);
-    background-color: var(--yellow);
+    background-color: var(--ThirdBM);
   }
   
   .tab.active[data-tab*="4"] {
-    color: var(--grey);
-    background-color: var(--purple);
+    background-color: var(--FourthBM);
   }
   
   .tab.active[data-tab*="5"] {
-    color: var(--grey);
-    background-color: var(--pink);
+    background-color: var(--FifthBM);
   }
   
   .tab.active[data-tab*="6"] {
-    color: var(--grey);
-    background-color: var(--blue);
+    background-color: var(--SixthBM);
   }
 
   .content.active {
@@ -448,7 +445,27 @@ input:focus {
   }
 }
 
+/* alerta de no javascript */
+.no-js {
+  z-index: 3;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
 
+.no-js>p {
+  color: var(--black);
+  font-family: var(--alt-font);
+  font-size: clamp(0.5rem, 10vw, 3rem);
+  margin: 0 10%;
+  /* text-align: center; */
+}
 
 
 /* background animation when noscript is active */
@@ -589,12 +606,12 @@ input:focus {
   padding: 0.125rem 1rem;
   background-color: var(--orange);
   color: var(--white);
-  font-family: var(--font-Modal);
+  font-family: var(--alt-font);
 }
 
 .modal-body {
   padding: 0.125rem 1rem;
-  font-family: var(--font-Modal);
+  font-family: var(--alt-font);
 }
 
 .modal-body p{
@@ -621,7 +638,7 @@ input:focus {
           align-items: center;
   padding: 0.125rem 1rem;
   background-color: var(--orange);
-  font-family: var(--font-Modal);
+  font-family: var(--alt-font);
 }
 
 .repo-github {

@@ -4,15 +4,15 @@ I wanted a startpage so I made one
 [Live](https://alplox.github.io/StartpagePlox/)
 
 ## Preview
-[![](https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png)](https://alplox.github.io/StartpagePlox/)
+[![](https://raw.githubusercontent.com/Alplox/rice/master/assets/images/previews/StartpagePlox%20v2.png)](https://alplox.github.io/StartpagePlox/)
 This is the first project I did from scratch while learning HTML, CSS, and JavaScript.
 
-I took inspiration from a lot of sources and end it mixing components from a few startpages that I found (as you can see in the [LICENSE](https://github.com/Alplox/StartpagePlox/blob/main/LICENSE) doc).
+I took inspiration from a lot of sources and end it mixing components from a few startpages that I found (as you can see in the [NOTICE](https://github.com/Alplox/StartpagePlox/blob/main/NOTICE.md)).
 
 ## Here are some of the sites from where I took stuff to make this startpage
-*This same list can be found, again, in the [LICENSE](https://github.com/Alplox/StartpagePlox/blob/main/LICENSE) file of the repository.
+*This same list can be found, again, in the [NOTICE](https://github.com/Alplox/StartpagePlox/blob/main/NOTICE.md) file of the repository.
 ### Mentions:
-- Code and style for "datetime" based on https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html
+- Code for "reloj" based on https://github.com/isai-ismael/reloj-digital
 - Code and style for "wave" based on https://github.com/0-l/aqua
 - Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
 - Favicon created using this site https://favicon.io/
@@ -23,6 +23,7 @@ I took inspiration from a lot of sources and end it mixing components from a few
 - Icons from https://ionicons.com/
 - Roboto Mono font from https://fonts.google.com/
 - "table-container" based on https://github.com/MrAlpha786/getstarted
+
 ## License
 ```
 MIT License

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
+<html lang="es">
 <!--
  * StartpagePlox by Alplox
  * https://github.com/Alplox/StartpagePlox
 -->
-<html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary Meta Tags -->
     <title>/A\</title>
+    <!-- Primary Meta Tags -->
     <meta name="title" content="/A\">
     <meta name="description" content="Startpage de Alplox">
     <!-- Open Graph / Facebook -->
@@ -17,25 +16,26 @@
     <meta property="og:url" content="https://alplox.github.io/StartpagePlox/">
     <meta property="og:title" content="/A\">
     <meta property="og:description" content="Startpage de Alplox">
-    <meta property="og:image" content="https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Alplox/rice/master/assets/images/previews/StartpagePlox%20v2.png">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://alplox.github.io/StartpagePlox/">
     <meta property="twitter:title" content="/A\">
     <meta property="twitter:description" content="Startpage de Alplox">
-    <meta property="twitter:image" content="https://github.com/Alplox/StartpagePlox/raw/main/StartpagePlox%20v2.png">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Alplox/rice/master/assets/images/previews/StartpagePlox%20v2.png">
     <base target="_blank">
-    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
-    <link rel="manifest" href="Favicon/site.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <noscript>
         <div class="no-js">
-            <p>⚠️ El sitio <b>no</b> funciona sin <b>JavaScript</b>, habilitalo para continuar.</p>
+            <p>⚠️ El sitio <b>no</b> funciona sin <b>JavaScript</b>.</p>
+            <p>Si lo has deshabilitado, por favor <b>vuelve a activarlo</b>.</p>
             <div class="wave"></div>
         </div>
     </noscript>
@@ -46,34 +46,24 @@
             <button id="Btn_skull">
                 <span class="skull"></span>
             </button>
-            <!--clock-->
-            <div class="datetime">
-                <div class="time">
-                    <span id="hour">00</span>:<span id="minutes">00</span>:
-                    <span id="seconds">00</span>
-                    <span id="period">AM</span>
-                </div>
-                <div class="date">
-                    <b><span id="dayname">Day</span></b>,
-                    <span id="month">Month</span>
-                    <span id="daynum">00</span>,
-                    <span id="year">Year</span>
-                </div>
+            <div class="reloj">
+                <div id="hora" class="hora"></div>
+                <div id="periodo" class="periodo"></div>
             </div>
+            <div id="fecha" class="fecha"></div>
             <span class="mention-wallpaper">
                 <p><a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684">Chemical
                         Convection</a> by <a href="https://www.deviantart.com/teundenouden/">teundenouden</a></p>
             </span>
         </section>
 
-        <!--Searchbar-->
+        <!--Searchbar (this one is neat https://start.nicfontaine.com/)-->
         <section id="search" class="searchbar">
             <input type="text" class="searchbox" name="q" title="Searchbar" placeholder="Search (Qwant by default)..."
                 id="main-search" spellcheck="false" autocomplete="off" size="40" maxlength="255" />
             <ul class="search-engines"></ul>
         </section>
 
-        <!-- <section id="bookmark-container"></section> -->
         <div class="table-container">
             <div class="col-container">
                 <div class="tab active" data-tab="tab-1"></div>
@@ -109,19 +99,19 @@
                 <h2>This is the first project I did from scratch while learning HTML, CSS, and JavaScript.</h2>
                 <h3>Here are some of the sites from where I took stuff to make this startpage</h3>
                 <p>*This same list can be found in the <a
-                        href="https://github.com/Alplox/StartpagePlox/blob/main/LICENSE">LICENSE</a> file in
+                        href="https://github.com/Alplox/StartpagePlox/blob/main/NOTICE.md">NOTICE</a> file in
                     the <a href="https://github.com/Alplox/StartpagePlox">repository
                     </a>
                     <span class="logo-github-small"></span>.
                 </p>
                 <h4>Mentions:</h4>
-                <p>&#8226;Code and style for "datetime" based on <a
-                        href="https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html">https://nightfury-alfa.com/pages/codingsnow/tutorials/tutorial30.html</a>
+                <p>&#8226;Code for "reloj" based on <a
+                        href="https://github.com/isai-ismael/reloj-digital">https://github.com/isai-ismael/reloj-digital</a>
                 </p>
                 <p>&#8226;Code and style for "wave" based on <a
                         href="https://github.com/0-l/aqua">https://github.com/0-l/aqua</a></p>
                 <p>&#8226;Code and style for "searchbar" based on <a
-                        href="https://codepen.io/cristina-silva/pen/XXOpga">https://github.com/TB-96/Evening-Startpage</a>
+                        href="https://github.com/TB-96/Evening-Startpage">https://github.com/TB-96/Evening-Startpage</a>
                 </p>
                 <p>&#8226;Favicon created using this site <a href="https://favicon.io/">https://favicon.io/</a></p>
                 <h4>Copyrighted Work:</h4>
@@ -160,9 +150,7 @@
             </footer>
         </div>
     </div>
-
-    <script src="js/bookmarks.js"></script>
-    <script rel="preload" src="js/scripts.js"></script>
+<script src="/assets/js/bookmarks.js"></script>
+<script rel="preload" src="/assets/js/scripts.js"></script>
 </body>
-
 </html>
