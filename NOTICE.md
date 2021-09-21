@@ -1,24 +1,20 @@
 # NOTICES AND INFORMATION
 This proyect incorporates material from third parties.
 
-================================================================================
+```
 Mentions:
 Code for "reloj" based on https://github.com/isai-ismael/reloj-digital
 Code and style for "wave" based on https://github.com/0-l/aqua
 Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
 Favicon created using this site https://favicon.io/
-================================================================================
-
-Copyrighted Work:
-License for SVG Background from https://www.heropatterns.com/
-License for Chemical Convection By teundenouden https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684
-License for Icons from https://ionicons.com/
-License for Roboto Mono font from https://fonts.google.com/
-License for "table-container" based on https://github.com/MrAlpha786/getstarted
+```
 
 ## SVG Background
 ### Steve Schoger
 **Source**: https://www.heropatterns.com/
+<details>
+<summary>License</summary>
+	
 ```
 Attribution 4.0 International
 
@@ -418,10 +414,14 @@ public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
 ```
+</details>
 
 ## Chemical Convection
 ### teundenouden
 **Source**: https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684
+<details>
+<summary>License</summary>
+	
 ```
 Attribution-NonCommercial-NoDerivs 3.0 Unported
 
@@ -763,10 +763,14 @@ of doubt, this trademark restriction does not form part of this License.
 
 Creative Commons may be contacted at https://creativecommons.org/.
 ```
+</details>
 
 ## Icons ("skull, logo-github-small, logo-github-large)
 ### Ionic Framework
 **Source**: https://ionicons.com/
+<details>
+<summary>License</summary>
+	
 ```
 The MIT License (MIT)
 
@@ -790,10 +794,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
+</details>
 
 ## Roboto Mono
 ### Christian Robertson
 **Source**: https://fonts.google.com/
+<details>
+<summary>License</summary>
+	
 ```
 
                                  Apache License
@@ -998,10 +1006,14 @@ THE SOFTWARE.
    See the License for the specific language governing permissions and
    limitations under the License.
 ```
+</details>
 
 ## "table-container"
 ### MrAlpha786
 **Source**: https://github.com/MrAlpha786/getstarted
+<details>
+<summary>License</summary>
+	
 ```
 
                     GNU GENERAL PUBLIC LICENSE
@@ -1679,3 +1691,5 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 ```
+
+</details>
