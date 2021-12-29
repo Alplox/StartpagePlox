@@ -39,7 +39,8 @@ https://github.com/Alplox/
   /* general */
   --bg: #0a0a0a;
   --modal-bg: var(--bookmarksBG);
-  --modal-a-visited: #a865ff; 
+  --modal-a: #47D1D1;
+  --modal-a-visited: #D1ADFF; 
   --mention: #442621;
 
   --black: #000000;
@@ -515,6 +516,10 @@ input:focus {
   line-height: 2;
   font-family: var(--alt-font);
   color: var(--white);
+}
+
+.modal-body a{
+  color: var(--modal-a);
 }
 
 .modal a:hover{
