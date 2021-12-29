@@ -1,3 +1,9 @@
+/* 
+Scripts v2.2
+por Alplox 
+https://github.com/Alplox/
+*/
+
 /* https://github.com/isai-ismael/reloj-digital */
 setInterval(() => {
   let fecha = document.getElementById("fecha");
@@ -50,11 +56,11 @@ for (let i=0; i<tabs.length; i++){
 
     tabs[i].innerHTML = cards[i].name;
 
-    var sites = Object.keys(cards[i].bookmarks);
+    let sites = Object.keys(cards[i].bookmarks);
     //Populate content with bookmarks
     for (let j=0; j<sites.length; j++){
 
-        var a_link = document.createElement('a');
+        const a_link = document.createElement('a');
         a_link.innerHTML = sites[j];
         a_link.href = cards[i].bookmarks[sites[j]];
 
@@ -76,9 +82,9 @@ for (let i=0; i<tabs.length; i++){
 }
 
 // MODAL https://www.w3schools.com/howto/howto_css_modals.asp
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("Btn_skull");
-var span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("Btn_skull");
+const span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
   modal.style.display = "block";
