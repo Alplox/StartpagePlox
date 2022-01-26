@@ -183,42 +183,5 @@ const cards = [
        "Deviantart": "https://www.deviantart.com",
        "Artstation": "https://www.artstation.com"
 		}
-	},
-	{
-		name: "XD",
-		bookmarks: {
-//reddit alternatives
-			"Ruqqus (R)": "https://ruqqus.com/",
-      "Communities (R)": "https://communities.win/",
-      "Saidit (R)": "https://saidit.net/",
-      "Lemmy (R)": "https://lemmy.ml/",
-      "Poal.co (R)": "https://poal.co/",
-      "Tildes (R)": "https://tildes.net",
-      "Libredd.it (R)": "https://libredd.it", //(front-end mirror for reddit)
-      "Teddit (R)": "https://teddit.net/", //(front-end mirror for reddit)
-//youtube alternatives
-      "D.tube (YT)": "https://d.tube/",
-      "Odysee (YT)": "https://odysee.com/",
-      "Storyfire (YT)": "https://storyfire.com/",
-      "Bitchute (YT)": "https://www.bitchute.com/",
-      "Invidio (YT)": "https://invidio.us/", //(front-end mirror for youtube)
-//twitch.TV alternatives
-      "Bitwave (TV)": "https://www.bitchute.com/",
-      "Dlive (TV)": "https://dlive.tv/",
-      "Trovo (TV)": "https://trovo.live/",
-//twitter alternatives
-      "Mastodon (T)": "https://joinmastodon.org/",
-      "Minds (T)": "https://www.minds.com/",
-      "Nitter (T)": "https://nitter.net", //(front-end mirror for twitter)
-//instagram alternatives
-      "Pixelfed (I)": "https://pixelfed.org/",
-      "Tiblar (I)": "https://tiblar.com",
-      "Bibliogram (I)": "https://bibliogram.art", //(front-end mirror for Instagram)
-//facebook alternatives
-      "Gab (F)": "https://gab.com",
-      "Brax (F)": "https://brax.me/",
-      "Diasporafoundation (F)": "https://diasporafoundation.org/",
-      "Friendi (F)": "https://friendi.ca/"
-		}
-	} 
+	}
 ]

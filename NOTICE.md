@@ -4,6 +4,7 @@ This proyect incorporates material from third parties.
 ```
 Mentions:
 Code for "reloj" based on https://github.com/isai-ismael/reloj-digital
+Code for "btn-dark-mode" based on https://youtu.be/xodD0nw2veQ - https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature - https://youtu.be/wodWDIdV9BY
 Code and style for "wave" based on https://github.com/0-l/aqua
 Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
 Favicon created using this site https://favicon.io/
@@ -796,7 +797,7 @@ THE SOFTWARE.
 ```
 </details>
 
-## Roboto Mono
+## Roboto Mono Font
 ### Christian Robertson
 **Source**: https://fonts.google.com/
 <details>
@@ -1005,10 +1006,11 @@ THE SOFTWARE.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
 ```
 </details>
 
-## "table-container"
+## code for "bm-container"
 ### MrAlpha786
 **Source**: https://github.com/MrAlpha786/getstarted
 <details>
@@ -1690,6 +1692,31 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+```
+
+</details>
+
+## modern-normalize
+### Nicolas Gallagher, Jonathan Neal & Sindre Sorhus
+**Source**: https://github.com/sindresorhus/modern-normalize
+<details>
+<summary>License</summary>
+	
+```
+
+MIT License
+
+Copyright (c) Nicolas Gallagher
+Copyright (c) Jonathan Neal
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 ```
 
 </details>
