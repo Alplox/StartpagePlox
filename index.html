@@ -2,7 +2,7 @@
 <html lang="es">
 <!--
   StartpagePlox by Alplox
-  https://github.com/Alplox/StartpagePlox (v2.3)
+  https://github.com/Alplox/StartpagePlox (v2.4)
 -->
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>/A\</title>
     <base target="_blank">
-    
+    <meta name="color-scheme" content="dark light">
+
     <link rel="stylesheet" href="assets/css/modern-normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Open Graph / Facebook -->
@@ -31,7 +32,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        el.updatemessage = "Nueva versión disponible";
+        document.body.appendChild(el);
+    </script>
 </head>
 
 <body>
@@ -47,9 +55,9 @@
         <section class="image">
 
             <div class="btns-container">
-                <div class="btn-dark-mode">
-                    <input type="checkbox" id="btn-dark-mode" />
-                    <label for="btn-dark-mode" >
+                <div class="btn-cambia-tema">
+                    <input type="checkbox" id="btn-cambia-tema" />
+                    <label for="btn-cambia-tema" >
                        <span class="ball"></span>
                     </label>
                  </div>
@@ -138,7 +146,7 @@
                 <li>Code for "reloj" based on <a
                         href="https://github.com/isai-ismael/reloj-digital" rel="nofollow noreferrer">https://github.com/isai-ismael/reloj-digital</a></li>
                 <li>
-                    Code for "btn-dark-mode" based on 
+                    Code for "btn-cambia-tema" based on 
                     <a href="https://youtu.be/xodD0nw2veQ" rel="nofollow noreferrer">https://youtu.be/xodD0nw2veQ</a> - 
                     <a href="https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature" rel="nofollow noreferrer">https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature</a> - 
                     <a href="https://youtu.be/wodWDIdV9BY" rel="nofollow noreferrer">https://youtu.be/wodWDIdV9BY</a>

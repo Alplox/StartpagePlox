@@ -1,5 +1,5 @@
 /* 
-Style v2.3
+Style v2.4
 por Alplox 
 https://github.com/Alplox/
 */
@@ -98,7 +98,7 @@ https://github.com/Alplox/
   --dark-grey: #1C1C1C;
   --black: #000000;
 
-  /* no cambian en modo oscuro */
+  /* no cambian independientes del tema */
   --fix-white: var(--white);
   --fix-black: var(--black);
  
@@ -106,9 +106,9 @@ https://github.com/Alplox/
   --wallpaper: url("../img/Chemical-Convection\ by\ teundenouden.jpeg"); 
 }
 
-.darkmode {
+.dark-mode {
   /* Bookmarks colors */
-  --bm-bg: #1C1C1C;
+  --bm-bg: #1C1C1C; /* #121212 */
   
   --first-bm: #381A1A;
   --second-bm: #024c08;
@@ -132,7 +132,7 @@ https://github.com/Alplox/
   --black: #ffffff;
 }
 
-.darkmode .image {
+.dark-mode .image {
   -webkit-box-shadow: inset 0 0 100vw var(--fix-black);
     box-shadow: inset 0 0 100vw var(--fix-black);
 }
@@ -202,19 +202,19 @@ body {
   outline: 2px solid var(--orange);
 }
 
-/* btn modal y darkmode */
+/* btn modal y dark-mode */
 .btns-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-/* btn darkmode */
-.btn-dark-mode {
-  margin: 10px  0 0 10px;
+/* btn dark-mode */
+.btn-cambia-tema {
+  margin: 10px 0 0 10px;
 }
 
-/* Toggler darkmode */
+/* Toggler dark-mode */
 label {
   display: flex;
   width: 50px;
@@ -240,16 +240,16 @@ label .ball {
   border-radius: 50%;
   transition: 0.8s;
 }
-.btn-dark-mode input:checked + label .ball {
+.btn-cambia-tema input:checked + label .ball {
   transform: translateX(25px);
   background: var(--black);
 }
 
-.btn-dark-mode input:checked + label {
+.btn-cambia-tema input:checked + label {
   background: var(--white);
 }
 
-.btn-dark-mode input {
+.btn-cambia-tema input {
   display: none;
 }
 
@@ -282,7 +282,6 @@ label .ball {
 .reloj {
   display: grid;
   grid-template-columns: 1fr .25fr;
-  grid-template-rows: 2fr 1fr;
   grid-template-areas: 
   "reloj ampm"
   "fecha fecha";
@@ -759,7 +758,7 @@ label .ball {
   
   .bm-tab-title {
     border-radius: 0;
-    padding: 10px 0;
+    padding: 10px;
   }
   
   .bm-tab {

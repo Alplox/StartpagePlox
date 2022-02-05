@@ -1,5 +1,5 @@
 /* 
-Scripts v2.3
+Scripts v2.4
 por Alplox 
 https://github.com/Alplox/
 */
@@ -12,30 +12,31 @@ const $d = {
 
 // dark mode
 // https://youtu.be/xodD0nw2veQ
-// https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature
+// https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-darkmode-feature
 // https://youtu.be/wodWDIdV9BY
 
-let dark_mode = localStorage.getItem('dark_mode')
-const btn_dark_mode = $d.qS('#btn-dark-mode');
+let tema_actual = localStorage.getItem('tema')
+const btn_cambia_tema = $d.qS('#btn-cambia-tema');
+/* const tema_preferido_dark = window.matchMedia('(prefers-color-scheme: dark)'); */
 
 const habilitar_dark_mode = () => {
-    document.body.classList.add('darkmode');
-    localStorage.setItem('dark_mode', 'enabled')
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('tema', 'dark')
 }
 
 const desabilitar_dark_mode = () => {
-    document.body.classList.remove('darkmode');
-    localStorage.setItem('dark_mode', 'disabled');
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('tema', 'light');
 }
 
-if (dark_mode === 'enabled') {
+if (tema_actual === 'dark') {
     habilitar_dark_mode();
 }
 
-btn_dark_mode.addEventListener('change', () => {
+btn_cambia_tema.addEventListener('change', () => {
   document.body.classList.remove('fade');
-    dark_mode = localStorage.getItem('dark_mode');
-        if(dark_mode !== 'enabled') {
+  tema_actual = localStorage.getItem('tema');
+        if(tema_actual !== 'dark') {
             habilitar_dark_mode()
         } else {
             desabilitar_dark_mode();
