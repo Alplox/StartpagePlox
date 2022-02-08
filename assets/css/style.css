@@ -365,6 +365,7 @@ label .ball {
   padding-top: 10px;
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
     justify-content: center;
 }
@@ -423,6 +424,7 @@ label .ball {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  word-break: break-word;
 }
 
 .bm-container-tabs-content{
@@ -762,7 +764,7 @@ label .ball {
   }
   
   .bm-tab {
-    height: 90%;
+    /* height: 90%; */
     overflow: hidden;
     overflow-y: visible;
     background-color: var(--bm-bg);
