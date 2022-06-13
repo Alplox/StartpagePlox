@@ -2,7 +2,7 @@ const cards = [
 	{
     name: "Bruh",
     bookmarks: {
-      "Tele": "https://alplox.github.io/tele/",
+      "Teles": "https://alplox.github.io/teles/",
       "Covid-19": "https://datastudio.google.com/reporting/b1689869-0c59-442c-951d-2991c0fc611d/page/rUZIB",
       "Google News": "https://news.google.com",
       "Microsoft News": "https://microsoftnews.msn.com/",
@@ -173,7 +173,9 @@ const cards = [
        "☁️ GNU CAT": "https://gnu.cat/",
        "☁️ Send-anywhere": "https://send-anywhere.com/",
        "☁️ tmp.ninja": "https://tmp.ninja/",
-       "☁️ fileconvoy": "http://fileconvoy.com/",
+       "☁️ Fileconvoy": "http://fileconvoy.com/",
+       "☁️ Catbox": "https://catbox.moe/",
+       "☁️ Streamja": "https://streamja.com/",
        //Inspo
        "Product Hunt": "https://www.producthunt.com/",
        "Behance": "https://www.behance.net/",
