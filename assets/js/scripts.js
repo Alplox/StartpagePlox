@@ -15,40 +15,40 @@ const $d = {
 // https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-darkmode-feature
 // https://youtu.be/wodWDIdV9BY
 
-let tema_actual = localStorage.getItem('tema')
-const btn_cambia_tema = $d.qS('#btn-cambia-tema');
-/* const tema_preferido_dark = window.matchMedia('(prefers-color-scheme: dark)'); */
+let temaActual = localStorage.getItem('tema')
+const btnCambiaTema = $d.qS('#btn-cambia-tema');
+/* const temaPreferidoDarkMode = window.matchMedia('(prefers-color-scheme: dark)'); */
 
-const habilitar_dark_mode = () => {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('tema', 'dark')
+const habilitarDarkMode = () => {
+  document.body.classList.add('dark-mode');
+  localStorage.setItem('tema', 'dark')
 }
 
-const desabilitar_dark_mode = () => {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('tema', 'light');
+const deshabilitarDarkMode = () => {
+  document.body.classList.remove('dark-mode');
+  localStorage.setItem('tema', 'light');
 }
 
-if (tema_actual === 'dark') {
-    habilitar_dark_mode();
+if (temaActual === 'dark') {
+  habilitarDarkMode();
 }
 
-btn_cambia_tema.addEventListener('change', () => {
+btnCambiaTema.addEventListener('change', () => {
   document.body.classList.remove('fade');
-  tema_actual = localStorage.getItem('tema');
-        if(tema_actual !== 'dark') {
-            habilitar_dark_mode()
-        } else {
-            desabilitar_dark_mode();
-        }
-    document.body.classList.add('fade');
+  temaActual = localStorage.getItem('tema');
+  if(temaActual !== 'dark') {
+    habilitarDarkMode()
+  } else {
+    deshabilitarDarkMode();
+  }
+  document.body.classList.add('fade');
 })
 
 // https://github.com/isai-ismael/reloj-digital
 function reloj(){
   let fecha = $d.qS("#fecha");
   let hora = $d.qS("#hora");
-  let am_pm = $d.qS("#am-pm");
+  let amPm = $d.qS("#am-pm");
 
   let date = new Date();
   let semana = [ 
@@ -84,44 +84,40 @@ function reloj(){
   
   fecha.textContent = `${semana[date.getDay()] + ", " + diaNuevo + " " + mes[date.getMonth()] + " " + date.getFullYear()}`;
   hora.textContent = `${date.toLocaleTimeString()}`;
-  am_pm.textContent = `${estado}`;
+  amPm.textContent = `${estado}`;
 }
   
 reloj();
 setInterval(reloj,1000);
 
 // Bookmark Table
-const tabs_title = $d.qA('.bm-tab-title');
-const contents = $d.qA('.bm-content');
+const bmTabsTitle = $d.qA('.bm-tab-title');
+const bmContent = $d.qA('.bm-content');
 
-for (let i=0; i<tabs_title.length; i++){
-
-  tabs_title[i].textContent = cards[i].name;
-
-    let sites = Object.keys(cards[i].bookmarks);
+for (let i=0; i<bmTabsTitle.length; i++){
+  bmTabsTitle[i].textContent = cards[i].name;
+  let sites = Object.keys(cards[i].bookmarks);
     //Populate content with bookmarks
     for (let j=0; j<sites.length; j++){
-
-        const a_link = document.createElement('a');
-        a_link.textContent = sites[j];
-        a_link.href = cards[i].bookmarks[sites[j]];
-        a_link.setAttribute('rel', 'nofollow noreferrer');
-
-        contents[i].appendChild(a_link);
+      const a = document.createElement('a');
+        a.textContent = sites[j];
+        a.href = cards[i].bookmarks[sites[j]];
+        a.setAttribute('rel', 'nofollow noreferrer');
+      bmContent[i].append(a);
     }
 
     // Make tab active on mouse click
-    tabs_title[i].addEventListener('mouseenter', function(){
-        for (let j=0; j<tabs_title.length; j++){
-          tabs_title[j].classList.remove('active');
-        }
-        tabs_title[i].classList.add('active');
+  bmTabsTitle[i].addEventListener('mouseenter', function(){
+    for (let j=0; j<bmTabsTitle.length; j++){
+      bmTabsTitle[j].classList.remove('active');
+    }
+    bmTabsTitle[i].classList.add('active');
 
-        for (let j=0; j<contents.length; j++){
-            contents[j].classList.remove('active');
-        }
-        contents[i].classList.add('active');
-    })
+    for (let j=0; j<bmContent.length; j++){
+        bmContent[j].classList.remove('active');
+    }
+    bmContent[i].classList.add('active');
+  })
 }
 
 // MODAL https://www.w3schools.com/howto/howto_css_modals.asp
@@ -129,19 +125,19 @@ const modal = $d.qS("#modal");
 const btn = $d.qS(".btn-skull");
 const span = $d.qS(".close");
 
-btn.onclick = function () {
+btn.addEventListener('click', () => {
   modal.style.display = "block";
-};
+});
 
-span.onclick = function () {
+span.addEventListener('click', () =>{
   modal.style.display = "none";
-};
+});
 
-window.onclick = function (event) {
-  if (event.target == modal) {
+window.addEventListener('click', (e) => {
+  if (e.target == modal) {
     modal.style.display = "none";
   }
-};
+});
 
 // SEARCH https://github.com/TB-96/Evening-Startpage
 
@@ -174,27 +170,24 @@ function engines () {
   };
 }
 
-const search = $d.qS('#search');
-const input = $d.qS('#search input[type="search"]');
-    
-const search_engines = engines();
+const barraBusquedaInput = $d.qS('#main-search');
+const searchEngines = engines();
 
-for (let key in search_engines) {
-  $d.qS('.search-engines').innerHTML += `<li><p title="${search_engines[key][1]}">!${key}</p></li>`;
+for (let key in searchEngines) {
+  $d.qS('.search-engines').innerHTML += `<li><p title="${searchEngines[key][1]}">!${key}</p></li>`;
 }
 
 document.onkeydown = () => {
+  barraBusquedaInput.focus()
+  barraBusquedaInput.scrollIntoView();
 
-  input.focus();
-  input.scrollIntoView();
-
-  search.onkeyup = (e) => {
+  barraBusquedaInput.onkeyup = (e) => {
     // separa !comando de texto dps del espacio https://es.stackoverflow.com/a/207413 
-    let args   = e.target.value.toLowerCase().split(' ') 
+    let args = e.target.value.toLowerCase().split(' ') 
     // lo separado en el string antes del espacio [0], lo luego del espacio queda en [1] / arg = argumento
     let prefix = args[0];   
     // buscador por defecto (Qwant), esto toma la url [0] de la key ['key']
-    let engine = search_engines['q'][0];
+    let engine = searchEngines['q'][0];
     let str = 0;
     // eng = engine
     $d.qA('.search-engines li p').forEach(eng => { 
@@ -210,18 +203,20 @@ document.onkeydown = () => {
         // transforma engine a la url, str es nº inicio para extraer texto que le sigue
         // prefix.substr(1) = !g termino_a_buscar => g termino_a_buscar
         // (g = 2) = (str = 2 + 1) de forma que cuando (g buscar) extraiga el texto desde la posicion 3, siempre tras el espacio
-        (engine = search_engines[prefix.substr(1)][0], str = prefix.length + 1);
+        (engine = searchEngines[prefix.substr(1)][0], str = prefix.length + 1);
         // cambia ventana por direccion completa de busqueda
         window.location = engine + args.join(' ').substr(str).toString().replace(/\s+/m, '%20');
-      } 
+      } else {
+        window.location = engine + args.join(' ').substr(str).toString().replace(/\s+/m, '%20');
+      }
     } else if (e.keyCode == 27 || e.keyCode == 'Escape') {
-      input.value = '';
-      input.blur()
+      barraBusquedaInput.value = '',
+      barraBusquedaInput.blur();
     };
   };
 };
 
-function remove_active() {
+function removeActiveSearchEngine() {
   $d.qA('.search-engines li').forEach(eng => {
     eng.classList.remove('active');
   });
@@ -230,15 +225,15 @@ function remove_active() {
 // cambiar buscador con clic
 $d.qA('.search-engines li').forEach(eng => {
   eng.addEventListener('click', () => {
-    input.focus();
-    remove_active();
+    barraBusquedaInput.focus();
+    removeActiveSearchEngine();
     eng.classList.add('active');
-    input.value = `${eng.textContent} `
+    barraBusquedaInput.value = `${eng.textContent} `
   });
 });
 
-// input pierde focus
-input.addEventListener('blur', () => {
-  /* input.value = '' */
-  remove_active();
+// barraBusquedaInput pierde focus
+barraBusquedaInput.addEventListener('blur', () => {
+  /* barraBusquedaInput.value = '' */
+  removeActiveSearchEngine();
 });
