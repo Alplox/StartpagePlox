@@ -213,10 +213,10 @@ document.onkeydown = () => {
         (engine = search_engines[prefix.substr(1)][0], str = prefix.length + 1);
         // cambia ventana por direccion completa de busqueda
         window.location = engine + args.join(' ').substr(str).toString().replace(/\s+/m, '%20');
-      } else if (e.keyCode == 27) {
-        input.value = '';
-        input.blur()
-      }
+      } 
+    } else if (e.keyCode == 27 || e.keyCode == 'Escape') {
+      input.value = '';
+      input.blur()
     };
   };
 };

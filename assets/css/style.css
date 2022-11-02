@@ -371,7 +371,7 @@ label .ball {
 }
 
 .search-engines li {
-  border: 1px var(--bm-bg) solid;
+  outline: 1px var(--bm-bg) solid;
   border-radius: 5px;
   margin: 0 5px;
 }
@@ -385,7 +385,7 @@ label .ball {
 .search-engines li p {
   font-size: clamp(0.75rem, 1vw, 1rem);
   padding: 5px;
-  border-radius: 5px;
+  
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
@@ -865,9 +865,10 @@ label .ball {
     padding: 5px 2px 0 2px;
   }
 
-  .search-engines li p:hover {
+  .search-engines li:hover {
     background-color: var(--bm-bg);
     color: var(--black);
     cursor: pointer;
+    outline: 1px solid var(--black);
   }
 }
