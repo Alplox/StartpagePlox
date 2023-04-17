@@ -149,7 +149,6 @@ window.addEventListener('click', (e) => {
 // https://aur.archlinux.org/packages/?O=0&K=
 // https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=
 // https://thepiratebay.org/search/
-// https://www.bing.com/search?q=
 // https://www.reddit.com/search?q=
 // https://www.etsy.com/search?q=
 
@@ -158,9 +157,11 @@ window.addEventListener('click', (e) => {
 function engines () {
   return {
     g: ["https://google.com/search?q=", "Google"],
+    b: ["https://www.bing.com/search?q=", "Bing"],
     d: ["https://duckduckgo.com/html?q=", "DuckDuckGo"],
     s: ["https://www.startpage.com/do/search?q=", "Startpage"],
     q: ["https://www.qwant.com/?q=", "Qwant"],
+    y: ["https://you.com/search?q=", "You"],
     yt: ["https://youtube.com/results?search_query=", "Youtube"],
     i: ["https://google.com/search?tbm=isch&q=", "Google Images"],
     st: ["https://stackoverflow.com/search?q=", "Stackoverflow"],
