@@ -1,27 +1,51 @@
 {
     "name": "StartpagePlox",
     "short_name": "SPP",
-    "description": "Startpage by Alplox",
+    "description": "Startpage por Alplox",
+    "lang": "es",
+    "categories": [
+        "startpage",
+        "productivity",
+        "utilities",
+        "bookmark"
+    ],
     "theme_color": "#1C1C1C",
     "background_color": "#0a0a0a",
     "display": "standalone",
+    "orientation": "any",
     "start_url": "/StartpagePlox/",
     "id": "/StartpagePlox/",
-
-    "icons": [{
-        "src": "/assets/favicon/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }, {
-        "src": "/assets/favicon/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }],
+    "edge_side_panel": {
+        "preferred_width": 545
+    },
+    "display_override": [
+        "standalone",
+        "browser",
+        "minimal-ui",
+        "window-controls-overlay"
+    ],
+    "icons": [
+        {
+            "src": "/assets/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
     "screenshots": [
         {
-        "src": "./assets/img/previews/StartpagePlox v2.3.png",
-        "type": "image/jpg",
-        "sizes": "1920x1080"
+            "src": "./assets/img/previews/phone.jpg",
+            "type": "image/jpg",
+            "sizes": "1080x1920"
+        },
+        {
+            "src": "./assets/img/previews/pc.jpg",
+            "type": "image/jpg",
+            "sizes": "1920x1080"
         }
     ]
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <!--
-  StartpagePlox by Alplox
-  https://github.com/Alplox/StartpagePlox (v2.4)
+v2.5
+StartpagePlox by Alplox
+https://github.com/Alplox/StartpagePlox
 -->
 <head>
     <meta charset="UTF-8">
@@ -13,7 +14,6 @@
     <title>/A\</title>
     <base target="_blank">
     <meta name="color-scheme" content="dark light">
-
     <link rel="stylesheet" href="assets/css/modern-normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Open Graph / Facebook -->
@@ -21,13 +21,13 @@
     <meta property="og:url" content="https://alplox.github.io/StartpagePlox/">
     <meta property="og:title" content="/A\">
     <meta property="og:description" content="Startpage de Alplox">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Alplox/StartpagePlox/main/assets/img/previews/StartpagePlox%20v2.3.png">
+    <meta property="og:image" content="assets/img/previews/pc.jpg">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://alplox.github.io/StartpagePlox/">
     <meta property="twitter:title" content="/A\">
     <meta property="twitter:description" content="Startpage de Alplox">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/Alplox/StartpagePlox/main/assets/img/previews/StartpagePlox%20v2.3.png">
+    <meta property="twitter:image" content="assets/img/previews/pc.jpg">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -44,58 +44,53 @@
 
 <body>
     <noscript>
-        <div class="no-js">
-            <p>⚠️ El sitio <b>no</b> funciona sin <b>JavaScript</b>.</p>
-            <p>Si lo has deshabilitado, por favor <b>vuelve a activarlo</b>.</p>
-            <div class="wave"></div>
-        </div>
+        <p>⚠️ El sitio <b>no</b> funciona sin <b>JavaScript</b>.</p>
+        <p>Si lo has deshabilitado, por favor <b>vuelve a activarlo</b>.</p>
     </noscript>
 
     <main class="container">
         <section class="image">
-
-            <div class="btns-container">
-                <div class="btn-cambia-tema">
-                    <input type="checkbox" id="btn-cambia-tema" />
-                    <label for="btn-cambia-tema" >
-                       <span class="ball"></span>
+            <div class="container-botones-imagen">
+                <div class="container-checkbox-tema">
+                    <input type="checkbox" id="boton-alternar-tema" aria-labelledby="boton-alternar-tema" tabindex="0"/>
+                    <label for="boton-alternar-tema">
+                        <span class="ball"></span>
                     </label>
                  </div>
-
-                <!-- Open Modal -->
-                <button type="button" class="btn-skull" id="btn-skull" aria-labelledby="Boton que abre ventana modal">
+                <button type="button" class="boton-open-modal" id="boton-open-modal" aria-labelledby="Boton que abre ventana modal" tabindex="0">
                     <svg xmlns='http://www.w3.org/2000/svg' class='skull' viewBox='0 0 512 512'><title>Skull</title><path d='M448 225.64v99a64 64 0 01-40.23 59.42l-23.68 9.47A32 32 0 00364.6 417l-10 50.14A16 16 0 01338.88 480H173.12a16 16 0 01-15.69-12.86L147.4 417a32 32 0 00-19.49-23.44l-23.68-9.47A64 64 0 0164 324.67V224c0-105.92 85.77-191.81 191.65-192S448 119.85 448 225.64z' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/><circle cx='168' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/><circle cx='344' cy='280' r='40' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 336l-16 48h32l-16-48zM256 448v32M208 448v32M304 448v32'/></svg>
                 </button>
             </div>
         <div class="tiempo-fondo">
-            <div class="reloj">
-                    <div id="hora" class="hora"></div>
+            <div class="tiempo">
+                <div class="reloj ">
+                    <time id="hora" class="hora"></time>
                     <div id="am-pm" class="am-pm"></div>
+                </div>
                 <p id="fecha" class="fecha"></p>
             </div>
         </div>
             <p class="mention-wallpaper">Imagen: 
-                <a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684" rel="nofollow noreferrer">Chemical Convection</a> 
+                <a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684" rel="nofollow noreferrer" tabindex="0">Chemical Convection</a> 
                 por 
-                <a href="https://www.deviantart.com/teundenouden/" rel="nofollow noreferrer">teundenouden</a>
+                <a href="https://www.deviantart.com/teundenouden/" rel="nofollow noreferrer" tabindex="0">teundenouden</a>
             </p>
         </section>
 
-        <!--Searchbar (this one is neat https://start.nicfontaine.com/)-->
-        <section class="searchbar" aria-labelledby="barra de busqueda">
-            <input type="search" class="searchbox" name="q" title="barra de busqueda" placeholder="Buscar (Qwant por defecto)..."
-                id="main-search" spellcheck="false" autocomplete="off" size="40" maxlength="255" />
-            <ul class="search-engines"></ul>
+        <section class="searchbar " aria-labelledby="barra de busqueda">
+            <input type="search" class="searchbox sombra-sm" name="q" title="barra de busqueda" placeholder="Buscar (Qwant por defecto)"
+                id="input-buscador" spellcheck="false" autocomplete="off" size="40" maxlength="255" tabindex="0"/>
+            <div class="container-search-engines"></div>
         </section>
         
         <div class="bm-container">
             <div class="bm-container-tabs">
                 <div class="bm-container-tabs-titles">
-                    <p class="bm-tab-title" data-tab="tab-1"></p>
-                    <p class="bm-tab-title" data-tab="tab-2"></p>
-                    <p class="bm-tab-title" data-tab="tab-3"></p>
-                    <p class="bm-tab-title" data-tab="tab-4"></p>
-                    <p class="bm-tab-title" data-tab="tab-5"></p>
+                    <p class="bm-tab-title"></p>
+                    <p class="bm-tab-title"></p>
+                    <p class="bm-tab-title"></p>
+                    <p class="bm-tab-title"></p>
+                    <p class="bm-tab-title"></p>
                 </div>
 
                 <div class="bm-container-tabs-content">
@@ -123,57 +118,45 @@
         </div>
 
         <footer class="footer-message">
-            <a class="underline" href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer">Desarrollado por Alplox</a>
+            <a class="underline" href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer" tabindex="0">Desarrollado por Alplox</a>
         </footer>
     </main>
 
     <!-- The Modal -->
     <div id="modal" class="modal" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" aria-label="Close">&times;</span>
-                <h1>Hi!</h1>
-            </div>
+        <div class="modal-content sombra">
             <div class="modal-body">
-                <h2>This is the first project I did from scratch while learning HTML, CSS, and JavaScript.</h2>
-                <h3>Here are some of the sites from where I took stuff to make this startpage</h3>
-                <p>*This same list can be found in the <a
-                        href="https://github.com/Alplox/StartpagePlox/blob/main/NOTICE.md" rel="nofollow noreferrer">NOTICE</a> file in
-                    the <a href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer">repository</a>.
+                <button type="button" class="close" aria-label="Close">&times;</button>
+                <h2>Este es el primer proyecto que hice desde cero mientras aprendía HTML, CSS y JavaScript.</h2>
+                <h3>Aquí están algunos de los sitios de donde tomé inspiración para hacer esta página</h3>
+                <p>*Esta misma lista se puede encontrar en el archivo <a href="https://github.com/Alplox/StartpagePlox/blob/main/NOTICE.md" rel="nofollow noreferrer">NOTICE</a> en el <a href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer">repositorio</a>.
                 </p>
                 <br>
-                <h4>Mentions:</h4>
-                <li>Code for "reloj" based on <a
-                        href="https://github.com/isai-ismael/reloj-digital" rel="nofollow noreferrer">https://github.com/isai-ismael/reloj-digital</a></li>
+                <h4>Menciones:</h4>
+                <li>Código para "reloj" basado en <a href="https://github.com/isai-ismael/reloj-digital" rel="nofollow noreferrer">https://github.com/isai-ismael/reloj-digital</a></li>
                 <li>
-                    Code for "btn-cambia-tema" based on 
+                    Código para "container-checkbox-tema" basado en 
                     <a href="https://youtu.be/xodD0nw2veQ" rel="nofollow noreferrer">https://youtu.be/xodD0nw2veQ</a> - 
                     <a href="https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature" rel="nofollow noreferrer">https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature</a> - 
                     <a href="https://youtu.be/wodWDIdV9BY" rel="nofollow noreferrer">https://youtu.be/wodWDIdV9BY</a>
                 </li>
-
-
-                <li>Code and style for "wave" based on <a
-                        href="https://github.com/0-l/aqua" rel="nofollow noreferrer">https://github.com/0-l/aqua</a></li>
-                <li>Code and style for "searchbar" based on <a
-                        href="https://github.com/TB-96/Evening-Startpage" rel="nofollow noreferrer">https://github.com/TB-96/Evening-Startpage</a>
-                </p>
-                <li>Favicon created using this site <a href="https://favicon.io/" rel="nofollow noreferrer">https://favicon.io/</a></li>
+                <li>Código y estilo para "searchbar" basado en <a href="https://github.com/TB-96/Evening-Startpage" rel="nofollow noreferrer">https://github.com/TB-96/Evening-Startpage</a></li>
+                <li>Favicon creado usando <a href="https://favicon.io/" rel="nofollow noreferrer">https://favicon.io/</a></li>
                 <br>
-                <h4>Copyrighted Work:</h4>
-                <li>SVG Background from <a href="https://www.heropatterns.com" rel="nofollow noreferrer">https://www.heropatterns.com</a>
-                </p>
-                <li>Chemical Convection By teundenouden <a
-                        href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684" rel="nofollow noreferrer">https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684</a>
-                </p>
-                <li>Icons from <a href="https://ionicons.com" rel="nofollow noreferrer">https://ionicons.com</a></li>
-                <li>Roboto Mono font from <a href="https://fonts.google.com/" rel="nofollow noreferrer">https://fonts.google.com/</a></li>
-                <li>Code and style for "bm-container" based on <a
-                        href="https://github.com/MrAlpha786/getstarted" rel="nofollow noreferrer">https://github.com/MrAlpha786/getstarted</a></li>
-
+                <h4>Trabajos bajo licencias:</h4>
+                <li>Fondo SVG <a href="https://www.heropatterns.com" rel="nofollow noreferrer">https://www.heropatterns.com</a></li>
+                <li>Chemical Convection por teundenouden <a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684" rel="nofollow noreferrer">https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684</a></li>
+                <li>Iconos <a href="https://ionicons.com" rel="nofollow noreferrer">https://ionicons.com</a></li>
+                <li>Fuente Roboto Mono <a href="https://fonts.google.com/" rel="nofollow noreferrer">https://fonts.google.com/</a></li>
+                <li>Código y estilo para "container-bookmarks" basado en <a href="https://github.com/MrAlpha786/getstarted" rel="nofollow noreferrer">https://github.com/MrAlpha786/getstarted</a></li>
             </div>
             <footer class="modal-footer">
-                <a href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer"><svg xmlns='http://www.w3.org/2000/svg' class="repo-github" viewBox='0 0 512 512'><path d='M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z'/></svg>&#8212; StartpagePlox by Alplox</a>
+                <a href="https://github.com/Alplox/StartpagePlox" rel="nofollow noreferrer">
+                    <svg xmlns='http://www.w3.org/2000/svg' class="repo-github" viewBox='0 0 512 512'>
+                        <path d='M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z'/>
+                    </svg>
+                    &#8212; StartpagePlox por Alplox
+                </a>
             </footer>
         </div>
     </div>

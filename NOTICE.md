@@ -1,13 +1,13 @@
 # NOTICES AND INFORMATION
-This proyect incorporates material from third parties.
+Este proyecto incorpora material de terceros.
 
 ```
-Mentions:
-Code for "reloj" based on https://github.com/isai-ismael/reloj-digital
-Code for "btn-dark-mode" based on https://youtu.be/xodD0nw2veQ - https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature - https://youtu.be/wodWDIdV9BY
-Code and style for "wave" based on https://github.com/0-l/aqua
-Code and style for "searchbar" based on https://github.com/TB-96/Evening-Startpage
-Favicon created using this site https://favicon.io/
+Menciones:
+- Código para "reloj" basado en https://github.com/isai-ismael/reloj-digital
+- Código para "btn-dark-mode" basado en https://youtu.be/xodD0nw2veQ - https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature - https://youtu.be/wodWDIdV9BY
+- Código y estilo para "searchbar" basado en https://github.com/TB-96/Evening-Startpage
+- Favicon creado usando https://favicon.io/
+- Imágenes repositorio: https://shots.so/
 ```
 
 ## SVG Background
@@ -1010,7 +1010,7 @@ THE SOFTWARE.
 ```
 </details>
 
-## code for "bm-container"
+## code for "container-bookmarks"
 ### MrAlpha786
 **Source**: https://github.com/MrAlpha786/getstarted
 <details>
