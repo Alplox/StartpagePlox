@@ -369,7 +369,6 @@ const engines = () => ({
   gh: ["https://github.com/search?q=", "GitHub"],
   tw: ["https://www.twitch.tv/search?term=", "Twitch"],
   im: ["https://www.imdb.com/find/?q=", "IMDB"],
-  rd: ["https://old.reddit.com/search?q=", "Reddit"],
   aur: ["https://aur.archlinux.org/packages/?O=0&K=", "Archlinux"],
   amz: ["https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=", "Amazon"],
   tpb: ["https://thepiratebay.org/search/", "The Pirate Bay"],
