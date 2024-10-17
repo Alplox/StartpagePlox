@@ -78,7 +78,7 @@ const PERSONALIZED_BOOKMARKS = [
       "Microsoft News": "https://microsoftnews.msn.com/",
       "Google Trends": "https://trends.google.com/trends/trendingsearches/daily?geo=CL",
       "💬OpenAI Chat": "https://chatgpt.com/",
-      "💬Bing Chat": "https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx",
+      "💬Bing Chat": "https://copilot.microsoft.com/",
       "💬Perplexity": "https://www.perplexity.ai/",
       "💬You Chat": "https://you.com/search?q=&tbm=youchat&cfr=chat",
       "💬Gemini Chat": "https://gemini.google.com/",
