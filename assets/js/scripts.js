@@ -69,6 +69,7 @@ function reloj(){
 reloj();
 setInterval(reloj,1000);
 
+// MARK: BOOKMARKS
 const PERSONALIZED_BOOKMARKS = [
 	{
     name: "Bruh",
@@ -109,7 +110,7 @@ const PERSONALIZED_BOOKMARKS = [
       "/r/PCMR": "https://old.reddit.com/r/pcmasterrace/",
       "/r/hiphopheads": "https://old.reddit.com/r/hiphopheads/",
       // IT
-      "/r/sysadmin": "https://old.reddit.com/r/chileIT",
+      "/r/chileIT": "https://old.reddit.com/r/chileIT",
       "/r/sysadmin": "https://old.reddit.com/r/sysadmin/",
       "/r/DataHoarder": "https://old.reddit.com/r/DataHoarder/",
       "/r/homelab": "https://old.reddit.com/r/homelab/",
@@ -137,6 +138,8 @@ const PERSONALIZED_BOOKMARKS = [
       "/r/Frontend": "https://old.reddit.com/r/Frontend/",
       "/r/javascript": "https://old.reddit.com/r/javascript/",
       "/r/firefox": "https://old.reddit.com/r/firefox/",
+      "/r/zen_browser": "https://old.reddit.com/r/zen_browser/",
+      "/r/uBlockOrigin": "https://old.reddit.com/r/uBlockOrigin/",
       // INSPO
       "/r/Art": "https://old.reddit.com/r/Art/",
       "/r/StableDiffusion": "https://old.reddit.com/r/StableDiffusion/",
@@ -177,6 +180,8 @@ const PERSONALIZED_BOOKMARKS = [
       "/r/solotravel": "https://old.reddit.com/r/solotravel/",
       "/r/techwearclothing": "https://old.reddit.com/r/techwearclothing/",
       "/r/streetwear": "https://old.reddit.com/r/streetwear/",
+      "/r/silenthill": "https://old.reddit.com/r/silenthill/",
+      "/r/Superstonk": "https://old.reddit.com/r/Superstonk/",
       // le cheap
       "/r/Frugal": "https://old.reddit.com/r/Frugal/",
       "/r/BuyItForLife": "https://old.reddit.com/r/BuyItForLife/",
