@@ -235,6 +235,8 @@ const PERSONALIZED_BOOKMARKS = [
       "📻Deko.fm/": "https://deko.fm/",
       "📻rofi": "https://rofi.vercel.app/",
       "📻loficlub": "https://loficlub.vercel.app/",
+      "📻lofigenerator": "https://lofigenerator.com/",
+      "📻nts.live": "https://www.nts.live/infinite-mixtapes",
       //Background noise generators
       "🌧️Asoftmurmur": "https://asoftmurmur.com/",
       "🌧️Naturemixer": "https://naturemixer.com",
