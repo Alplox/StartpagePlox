@@ -243,6 +243,7 @@ const PERSONALIZED_BOOKMARKS = [
       "🌧️Soundscape": "https://soundscape.world/",
       "🌧️Defonic": "https://defonic.com/",
       "🌧️Rainbowhunt": "https://rainbowhunt.com/",
+      "🌧️Noisefill": "https://www.noisefill.com/",
     }
   },
   {
