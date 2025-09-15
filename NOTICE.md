@@ -8,6 +8,7 @@ Menciones:
 - Código y estilo para "searchbar" basado en https://github.com/TB-96/Evening-Startpage
 - Favicon creado usando https://favicon.io/
 - Imágenes repositorio: https://shots.so/
+- Iconos buscadores: https://simpleicons.org/ y https://svgbox.net/iconsets/
 ```
 
 ## SVG Background

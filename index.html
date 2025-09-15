@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!--
-v2.5
+v2.6
 StartpagePlox by Alplox
 https://github.com/Alplox/StartpagePlox
 -->
@@ -52,7 +52,7 @@ https://github.com/Alplox/StartpagePlox
         <section class="image">
             <div class="container-botones-imagen">
                 <div class="container-checkbox-tema">
-                    <input type="checkbox" id="boton-alternar-tema" aria-labelledby="boton-alternar-tema" tabindex="0"/>
+                    <input type="checkbox" id="boton-alternar-tema" title="Alternar tema oscuro/claro" tabindex="0"/>
                     <label for="boton-alternar-tema">
                         <span class="ball"></span>
                     </label>
@@ -77,10 +77,13 @@ https://github.com/Alplox/StartpagePlox
             </p>
         </section>
 
-        <section class="searchbar " aria-labelledby="barra de busqueda">
-            <input type="search" class="searchbox sombra-sm" name="q" title="barra de busqueda" placeholder="Buscar (Qwant por defecto)"
-                id="input-buscador" spellcheck="false" autocomplete="off" size="40" maxlength="255" tabindex="0"/>
-            <div class="container-search-engines"></div>
+        <section class="searchbar-section" aria-labelledby="barra de busqueda">
+                <div class="custom-search-select">
+                    <button id="search-select-btn" class="search-select-btn sombra-sm" aria-label="Seleccionar buscador" tabindex="0"></button>
+                    <div id="search-select-list" class="search-select-list sombra-sm"></div>
+                </div>
+                <input type="search" class="searchbox sombra-sm" name="q" title="barra de busqueda" placeholder="Buscar (DuckDuckGo por defecto)"
+                    id="input-buscador" spellcheck="false" autocomplete="off" size="40" maxlength="255" tabindex="0"/>
         </section>
         
         <div class="bm-container">
@@ -146,7 +149,7 @@ https://github.com/Alplox/StartpagePlox
                 <h4>Trabajos bajo licencias:</h4>
                 <li>Fondo SVG <a href="https://www.heropatterns.com" rel="nofollow noreferrer">https://www.heropatterns.com</a></li>
                 <li>Chemical Convection por teundenouden <a href="https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684" rel="nofollow noreferrer">https://www.deviantart.com/teundenouden/art/Chemical-Convection-771768684</a></li>
-                <li>Iconos <a href="https://ionicons.com" rel="nofollow noreferrer">https://ionicons.com</a></li>
+                <li>Iconos <a href="https://ionicons.com" rel="nofollow noreferrer">https://ionicons.com</a>, <a href="https://simpleicons.org/" rel="nofollow noreferrer">https://simpleicons.org/</a> y <a href="https://svgbox.net/iconsets/" rel="nofollow noreferrer">https://svgbox.net/iconsets/</a></li>
                 <li>Fuente Roboto Mono <a href="https://fonts.google.com/" rel="nofollow noreferrer">https://fonts.google.com/</a></li>
                 <li>Código y estilo para "container-bookmarks" basado en <a href="https://github.com/MrAlpha786/getstarted" rel="nofollow noreferrer">https://github.com/MrAlpha786/getstarted</a></li>
             </div>
@@ -160,6 +163,7 @@ https://github.com/Alplox/StartpagePlox
             </footer>
         </div>
     </div>
-<script src="assets/js/scripts.js"></script>
+    
+<script src="assets/js/scripts.js" type="module"></script>
 </body>
 </html>
