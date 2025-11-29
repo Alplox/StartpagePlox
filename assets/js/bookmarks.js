@@ -19,7 +19,7 @@ export const PERSONALIZED_BOOKMARKS = [
       "💬Gemini Chat": "https://gemini.google.com/",
       "💬Poe Chat": "https://poe.com/",
       "💬LMSYS Chatbots": "https://chat.lmsys.org/",
-      "💬Grok": "https://grok.ai/",
+      "💬Grok": "https://grok.com/",
       "Gmail": "https://mail.google.com/",
       "Google Keep": "https://keep.google.com/u/0/",
       "Notion": "https://www.notion.com/",
