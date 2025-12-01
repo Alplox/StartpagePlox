@@ -18,7 +18,7 @@ export const PERSONALIZED_BOOKMARKS = [
       "💬You Chat": "https://you.com/search?q=&tbm=youchat&cfr=chat",
       "💬Gemini Chat": "https://gemini.google.com/",
       "💬Poe Chat": "https://poe.com/",
-      "💬LMSYS Chatbots": "https://chat.lmsys.org/",
+      "💬lmarena": "https://lmarena.ai",
       "💬Grok": "https://grok.com/",
       "Gmail": "https://mail.google.com/",
       "Google Keep": "https://keep.google.com/u/0/",
