@@ -214,6 +214,7 @@ export const PERSONALIZED_BOOKMARKS = [
        "Ciberpatrulla": "https://ciberpatrulla.com/links/",
        "Osintframework": "https://osintframework.com/",
        //Share
+       "☁️ localsend": "https://localsend.org/es",
        "☁️ Toffeeshare (P2P)": "https://toffeeshare.com/",
        "☁️ File.pizza (P2P)": "https://file.pizza/",
        "☁️ Wormhole": "https://wormhole.app/",
