@@ -20,7 +20,7 @@ export function iniciarReloj(fechaEl, horaEl, periodoEl) {
     const TEXTO_DIA = DIAS_SEMANA[date.getDay()];
     const TEXTO_MES = MESES[date.getMonth()];
     const NUMERO_AÑO = date.getFullYear();
-    const HORA_ACTUAL = date.toLocaleTimeString('es-ES', OPCIONES_FORMATO);
+    const HORA_ACTUAL = date.toLocaleTimeString('en-US', OPCIONES_FORMATO); // en-US para obtener siempre AM/PM estándar
     const [HORA, PERIODO] = HORA_ACTUAL.split(' ');
     const PERIODO_CLEAN = PERIODO.replace(/[\.\s]/g, '');
     horaEl.textContent = HORA;

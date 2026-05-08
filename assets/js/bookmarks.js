@@ -12,6 +12,7 @@ export const PERSONALIZED_BOOKMARKS = [
       "News Minimalist": "https://www.newsminimalist.com/",
       "daily.dev": "https://app.daily.dev/posts",
       "Hacker News": "https://news.ycombinator.com/",
+      "worldwideview.dev": "https://demo.worldwideview.dev/",
       "worldmonitor.app": "https://worldmonitor.app/",
       "💬DuckDuckGo Chat": "https://duck.ai/",
       "💬OpenAI Chat": "https://chatgpt.com/",
