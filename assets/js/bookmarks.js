@@ -190,7 +190,7 @@ export const PERSONALIZED_BOOKMARKS = [
     bookmarks: {
       //Tools
       "Temp-gmail": "https://smailpro.com/temporary-email",
-      "Recursos": "https://alplox.github.io/mis-recursos-webdev/",
+      "Recursos": "https://mis-recursos-webdev.pages.dev/",
       "Deepl Translate": "https://www.deepl.com/en/translator",
       "Kagi Translate": "https://translate.kagi.com/",
       "G Translate": "https://translate.google.com/",
